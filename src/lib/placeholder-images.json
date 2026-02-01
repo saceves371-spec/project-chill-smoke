@@ -1,6 +1,12 @@
 {
   "placeholderImages": [
     {
+      "id": "main-logo",
+      "description": "Chill Smoke main logo",
+      "imageUrl": "https://storage.googleapis.com/studioprod-51a89.appspot.com/8f10134f-3769-4a0b-9c76-32d88c222e92_logo.png",
+      "imageHint": "chill smoke logo"
+    },
+    {
       "id": "hero-background",
       "description": "Dark, smoky background for the hero section.",
       "imageUrl": "https://images.unsplash.com/photo-1542400275-f0f2796b253f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbW9rZSUyMHRleHR1cmV8ZW58MHx8fHwxNzY5OTE1MDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",

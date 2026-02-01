@@ -1,21 +1,28 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Instagram } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const logoImage = PlaceHolderImages.find((p) => p.id === 'main-logo');
+
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4">
-        <h1 className="font-headline font-bold uppercase leading-none drop-shadow-[0_0_15px_hsl(var(--destructive)/0.4)]">
-          <span className="text-8xl bg-gradient-to-r from-destructive to-accent bg-clip-text text-transparent md:text-9xl">
-            Chill
-          </span>
-          <span className="block text-8xl text-white md:text-9xl">
-            Smoke
-          </span>
-        </h1>
+        {logoImage && (
+          <Image
+            src={logoImage.imageUrl}
+            alt={logoImage.description}
+            width={600}
+            height={465}
+            className="h-auto max-w-[90vw] md:max-w-xl"
+            data-ai-hint={logoImage.imageHint}
+            priority
+          />
+        )}
 
-        <p className="text-xl text-muted-foreground opacity-80">
+        <p className="mt-4 text-xl text-muted-foreground opacity-80">
           Sabor que pega distinto
         </p>
 

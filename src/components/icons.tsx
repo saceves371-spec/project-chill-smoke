@@ -1,12 +1,20 @@
-import { Flame } from 'lucide-react';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Logo() {
+  const logoImage = PlaceHolderImages.find((p) => p.id === 'main-logo');
+
   return (
-    <div className="flex items-center gap-3">
-      <Flame className="h-12 w-12 text-red-500 drop-shadow-[0px_0px_5px_#ef4444]" />
-      <span className="font-logo text-6xl text-red-500 [text-shadow:0px_0px_7px_#ef4444]">
-        Chill Smoke
-      </span>
+    <div className="flex items-center justify-center">
+      {logoImage && (
+        <Image
+          src={logoImage.imageUrl}
+          alt={logoImage.description}
+          width={300}
+          height={232}
+          data-ai-hint={logoImage.imageHint}
+        />
+      )}
     </div>
   );
 }
