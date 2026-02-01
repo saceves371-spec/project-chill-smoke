@@ -7,8 +7,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export function Hero() {
   const logoImage = PlaceHolderImages.find((p) => p.id === 'hero-logo');
   return (
-    <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
-      <div className="flex flex-col items-center gap-2 p-4 overflow-visible">
+    <section className="mb-12 flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
+      <div className="flex flex-col items-center gap-2 overflow-visible p-4">
         {logoImage && (
           <Image
             src={logoImage.imageUrl}
@@ -16,12 +16,11 @@ export function Hero() {
             width={400}
             height={400}
             data-ai-hint={logoImage.imageHint}
-            className="mb-4"
             priority
           />
         )}
 
-        <p className="mt-4 text-xl text-muted-foreground opacity-80">
+        <p className="text-xl text-muted-foreground opacity-80">
           Sabor que pega distinto
         </p>
 
