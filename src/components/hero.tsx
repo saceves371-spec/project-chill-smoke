@@ -13,8 +13,8 @@ export function Hero() {
           <Image
             src={logoImage.imageUrl}
             alt={logoImage.description}
-            width={300}
-            height={300}
+            width={400}
+            height={400}
             data-ai-hint={logoImage.imageHint}
             className="mb-4"
             priority
