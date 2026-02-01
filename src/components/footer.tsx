@@ -1,22 +1,37 @@
 import Link from 'next/link';
 import { Instagram } from 'lucide-react';
-import { Logo } from '@/components/icons';
+import { Card, CardContent } from '@/components/ui/card';
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-border/20 bg-transparent py-8">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 md:flex-row">
-        <div className="opacity-80">
-          <Logo />
-        </div>
-        <div className="text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Chill Smoke. Todos los derechos reservados.</p>
-          <p className="mt-1 font-bold text-primary">Solo para mayores de 18 años.</p>
-        </div>
-        <div className="flex items-center gap-4">
-          <Link href="https://www.instagram.com" target="_blank" aria-label="Instagram">
-            <Instagram className="h-6 w-6 text-muted-foreground transition-colors hover:text-primary" />
+    <footer className="w-full bg-transparent py-16">
+      <div className="container mx-auto flex max-w-3xl flex-col items-center gap-12 px-4">
+        <Card className="w-full rounded-2xl border-white/10 bg-black/30 p-8 text-center backdrop-blur-sm md:p-12">
+            <CardContent className="flex flex-col items-center gap-4 p-0">
+                <h3 className="font-headline text-3xl font-bold text-primary">
+                Sobre Chill Smoke
+                </h3>
+                <p className="max-w-xl text-lg text-muted-foreground">
+                Tu punto de referencia para los mejores vapes de la ciudad. Calidad premium, sabores únicos y atención personalizada. Todo lo que necesitas, a un mensaje de distancia.
+                </p>
+                <div className="mt-4 rounded-full border border-primary/50 bg-secondary px-5 py-2 text-sm font-semibold text-primary">
+                    +18 únicamente
+                </div>
+            </CardContent>
+        </Card>
+
+        <div className="flex flex-col items-center gap-4 text-center">
+          <Link
+            href="https://www.instagram.com"
+            target="_blank"
+            className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
+          >
+            <Instagram className="h-5 w-5" />
+            <span className="font-semibold">@chillsmoke</span>
           </Link>
+          <p className="text-xs text-muted-foreground/70">
+            © {new Date().getFullYear()} Chill Smoke. Uso responsable +18.
+          </p>
         </div>
       </div>
     </footer>
