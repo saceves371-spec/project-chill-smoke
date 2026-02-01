@@ -22,7 +22,7 @@ export function Hero() {
         <Button
           asChild
           size="lg"
-          className="mt-6 rounded-full bg-accent px-8 text-accent-foreground shadow-lg shadow-accent/40 transition-all hover:scale-105 hover:bg-accent/90 hover:shadow-accent/60"
+          className="mt-6 rounded-full bg-gradient-to-r from-destructive to-accent px-8 text-accent-foreground shadow-[0_0_15px_hsl(var(--accent)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_25px_hsl(var(--accent)/0.7)]"
         >
           <Link href="https://www.instagram.com" target="_blank">
             <Instagram className="mr-2 h-5 w-5" />
