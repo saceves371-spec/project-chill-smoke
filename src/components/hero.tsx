@@ -9,7 +9,7 @@ export function Hero() {
 
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
-      <div className="flex flex-col items-center gap-2 p-4">
+      <div className="flex flex-col items-center gap-2 p-4 overflow-visible">
         {logoImage && (
           <Image
             src={logoImage.imageUrl}
