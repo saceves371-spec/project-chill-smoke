@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Dark, smoky background for the hero section.",
+      "imageUrl": "https://images.unsplash.com/photo-1542400275-f0f2796b253f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbW9rZSUyMHRleHR1cmV8ZW58MHx8fHwxNzY5OTE1MDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smoke texture"
+    },
+    {
+      "id": "vapo-brand",
+      "description": "Background image for Vaporesso brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1739784804122-7bd875caeaf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2YXBlJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2OTkxNTA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vape lifestyle"
+    },
+    {
+      "id": "geek-brand",
+      "description": "Background image for GeekVape brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1637848971328-fbcc85994b8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1cmJhbiUyMG5pZ2h0fGVufDB8fHx8MTc2OTkxNTA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "urban night"
+    },
+    {
+      "id": "smok-brand",
+      "description": "Background image for Smok brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1500886834366-f7311927c60d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZW9uJTIwbGlnaHRzfGVufDB8fHx8MTc2OTgwNTcxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "neon lights"
+    },
+    {
+      "id": "elf-brand",
+      "description": "Background image for Elf Bar brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2xvcmZ1bCUyMGFic3RyYWN0fGVufDB8fHx8MTc2OTg5NzMyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful abstract"
+    }
+  ]
 }
