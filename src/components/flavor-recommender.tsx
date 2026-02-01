@@ -52,11 +52,11 @@ export function FlavorRecommender() {
   return (
     <section id="recommender" className="w-full py-12 md:py-20">
       <div className="container mx-auto max-w-2xl px-4">
-        <Card className="border-primary/50 bg-card/80 shadow-lg shadow-primary/10 backdrop-blur-sm">
+        <Card className="border-white/10 bg-black/30 backdrop-blur-sm">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Sparkles className="h-8 w-8 text-primary" />
-              <CardTitle className="text-3xl text-primary">Recomendador de Sabores IA</CardTitle>
+              <CardTitle className="text-3xl font-medium text-primary">Recomendador de Sabores IA</CardTitle>
             </div>
             <CardDescription>
               ¿No sabes qué elegir? Describe lo que te apetece (dulce, frutal, un postre, para acompañar el café...) y nuestra IA te dará una recomendación.
