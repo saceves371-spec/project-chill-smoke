@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'instagram.fgdl9-1.fna.fbcdn.net',
+        hostname: 'i.pinimg.com',
         port: '',
         pathname: '/**',
       },
