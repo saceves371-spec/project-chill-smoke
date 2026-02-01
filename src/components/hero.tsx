@@ -8,7 +8,7 @@ export function Hero() {
   const logoImage = PlaceHolderImages.find((p) => p.id === 'main-logo');
 
   return (
-    <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden text-center md:h-[80vh]">
+    <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4">
         {logoImage && (
           <Image
