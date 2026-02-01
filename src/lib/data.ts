@@ -13,21 +13,21 @@ export type Brand = {
 
 export const catalogData: Brand[] = [
   {
-    name: "Vaporesso",
-    imageId: "vapo-brand",
+    name: "ELF BAR",
+    imageId: "elf-brand",
     hits: [
       {
-        type: "5000 Hits",
-        flavors: ["Cool Mint", "Blue Razz Ice", "Lush Ice", "Mango Peach"],
+        type: "BC5000",
+        flavors: ["Sakura Grape", "Watermelon Ice", "Strawberry Mango", "Kiwi Passionfruit Guava"],
       },
       {
-        type: "8000 Hits",
-        flavors: ["Strawberry Kiwi", "Watermelon Bubblegum", "Grape Energy", "Peach Mango Watermelon"],
+        type: "TE6000",
+        flavors: ["Apple Peach", "Grape Ice", "Juicy Peach", "Strawberry Ice Cream"],
       },
     ],
   },
   {
-    name: "GeekVape",
+    name: "GEEK BAR",
     imageId: "geek-brand",
     hits: [
       {
@@ -41,8 +41,8 @@ export const catalogData: Brand[] = [
     ],
   },
   {
-    name: "Smok",
-    imageId: "smok-brand",
+    name: "PUFF",
+    imageId: "puff-brand",
     hits: [
       {
         type: "9000 Hits",
@@ -51,16 +51,16 @@ export const catalogData: Brand[] = [
     ],
   },
     {
-    name: "Elf Bar",
-    imageId: "elf-brand",
+    name: "Vaporesso",
+    imageId: "vapo-brand",
     hits: [
       {
-        type: "BC5000",
-        flavors: ["Sakura Grape", "Watermelon Ice", "Strawberry Mango", "Kiwi Passionfruit Guava"],
+        type: "5000 Hits",
+        flavors: ["Cool Mint", "Blue Razz Ice", "Lush Ice", "Mango Peach"],
       },
       {
-        type: "TE6000",
-        flavors: ["Apple Peach", "Grape Ice", "Juicy Peach", "Strawberry Ice Cream"],
+        type: "8000 Hits",
+        flavors: ["Strawberry Kiwi", "Watermelon Bubblegum", "Grape Energy", "Peach Mango Watermelon"],
       },
     ],
   },

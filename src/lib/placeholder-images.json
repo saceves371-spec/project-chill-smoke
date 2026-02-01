@@ -14,21 +14,21 @@
     },
     {
       "id": "geek-brand",
-      "description": "Background image for GeekVape brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1637848971328-fbcc85994b8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx1cmJhbiUyMG5pZ2h0fGVufDB8fHx8MTc2OTkxNTA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "urban night"
+      "description": "Background image for Geek Bar brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2xvcmZ1bCUyMGFic3RyYWN0fGVufDB8fHx8MTc2OTg5NzMyMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "colorful abstract"
     },
     {
-      "id": "smok-brand",
-      "description": "Background image for Smok brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1500886834366-f7311927c60d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZW9uJTIwbGlnaHRzfGVufDB8fHx8MTc2OTgwNTcxMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "neon lights"
+      "id": "puff-brand",
+      "description": "Background image for Puff brand.",
+      "imageUrl": "https://images.unsplash.com/photo-1505968434133-1158c38729a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b21hbiUyMGdyYXNzfGVufDB8fHx8MTc3MDE3NjM3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman grass"
     },
     {
       "id": "elf-brand",
       "description": "Background image for Elf Bar brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjb2xvcmZ1bCUyMGFic3RyYWN0fGVufDB8fHx8MTc2OTg5NzMyMHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "colorful abstract"
+      "imageUrl": "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxncmF5JTIwZ3JhZGllbnR8ZW58MHx8fHwxNzcwMTc2NjMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gray gradient"
     }
   ]
 }
