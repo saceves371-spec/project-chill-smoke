@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto flex max-w-3xl flex-col items-center gap-12 px-4">
         <Card className="w-full rounded-2xl border-white/10 bg-black/30 p-8 text-center backdrop-blur-sm md:p-12">
             <CardContent className="flex flex-col items-center gap-4 p-0">
-                <h3 className="text-3xl font-semibold text-primary">
+                <h3 className="text-3xl font-medium text-primary">
                 Sobre Chill Smoke
                 </h3>
                 <p className="max-w-xl text-lg text-muted-foreground">
@@ -22,12 +22,12 @@ export function Footer() {
 
         <div className="flex flex-col items-center gap-4 text-center">
           <Link
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/chillsmokegdl/"
             target="_blank"
             className="flex items-center gap-2 text-muted-foreground transition-colors hover:text-primary"
           >
             <Instagram className="h-5 w-5" />
-            <span className="font-semibold">@chillsmoke</span>
+            <span className="font-semibold">@chillsmokegdl</span>
           </Link>
           <p className="text-xs text-muted-foreground/70">
             © {new Date().getFullYear()} Chill Smoke. Uso responsable +18.
