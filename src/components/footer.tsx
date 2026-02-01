@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto flex max-w-3xl flex-col items-center gap-12 px-4">
         <Card className="w-full rounded-2xl border-white/10 bg-black/30 p-8 text-center backdrop-blur-sm md:p-12">
             <CardContent className="flex flex-col items-center gap-4 p-0">
-                <h3 className="font-headline text-3xl font-bold text-primary">
+                <h3 className="text-3xl font-semibold text-primary">
                 Sobre Chill Smoke
                 </h3>
                 <p className="max-w-xl text-lg text-muted-foreground">
