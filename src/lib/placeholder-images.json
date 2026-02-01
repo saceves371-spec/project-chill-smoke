@@ -38,9 +38,9 @@
     },
     {
       "id": "hero-logo",
-      "description": "Chill Smoke skull with headset logo",
-      "imageUrl": "https://i.pinimg.com/736x/7d/20/f7/7d20f7beae813753c1f61d560cd0b58d.jpg",
-      "imageHint": "skull headset"
+      "description": "Chill Smoke skull logo",
+      "imageUrl": "https://res.cloudinary.com/dogre008n/image/upload/v1769922482/smoke_75881b.png",
+      "imageHint": "skull smoke"
     }
   ]
 }
