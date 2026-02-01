@@ -13,16 +13,13 @@ export function Hero() {
           <Image
             src={logoImage.imageUrl}
             alt={logoImage.description}
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             data-ai-hint={logoImage.imageHint}
             className="mb-4"
             priority
           />
         )}
-        <h1 className="font-logo text-8xl uppercase tracking-widest text-white drop-shadow-[0_0_10px_hsl(var(--destructive))] md:text-9xl">
-          Chill Smoke
-        </h1>
 
         <p className="mt-4 text-xl text-muted-foreground opacity-80">
           Sabor que pega distinto
