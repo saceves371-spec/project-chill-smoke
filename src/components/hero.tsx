@@ -1,26 +1,14 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Instagram } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
-  const logoImage = PlaceHolderImages.find((p) => p.id === 'main-logo');
-
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4 overflow-visible">
-        {logoImage && (
-          <Image
-            src={logoImage.imageUrl}
-            alt={logoImage.description}
-            width={600}
-            height={600}
-            className="h-auto max-w-[90vw] md:max-w-2xl"
-            data-ai-hint={logoImage.imageHint}
-            priority
-          />
-        )}
+        <h1 className="font-logo text-8xl uppercase tracking-widest text-white drop-shadow-[0_0_10px_hsl(var(--destructive))] md:text-9xl">
+          Chill Smoke
+        </h1>
 
         <p className="mt-4 text-xl text-muted-foreground opacity-80">
           Sabor que pega distinto
