@@ -56,7 +56,7 @@ export function FlavorRecommender() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Sparkles className="h-8 w-8 text-primary" />
-              <CardTitle className="font-headline text-3xl text-primary">Recomendador de Sabores IA</CardTitle>
+              <CardTitle className="text-3xl text-primary">Recomendador de Sabores IA</CardTitle>
             </div>
             <CardDescription>
               ¿No sabes qué elegir? Describe lo que te apetece (dulce, frutal, un postre, para acompañar el café...) y nuestra IA te dará una recomendación.
