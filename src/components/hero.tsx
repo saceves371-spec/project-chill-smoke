@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4">
-        <h1 className="font-headline font-bold uppercase leading-none drop-shadow-lg">
+        <h1 className="font-headline font-bold uppercase leading-none drop-shadow-[0_0_15px_hsl(var(--destructive)/0.4)]">
           <span className="text-8xl bg-gradient-to-r from-destructive to-accent bg-clip-text text-transparent md:text-9xl">
             Chill
           </span>
