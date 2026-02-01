@@ -1,26 +1,11 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Instagram } from 'lucide-react';
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find((p) => p.id === 'hero-background');
-
   return (
-    <section className="relative flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden bg-background text-center md:h-[80vh]">
-      {heroImage && (
-        <Image
-          src={heroImage.imageUrl}
-          alt={heroImage.description}
-          fill
-          className="object-cover"
-          priority
-          data-ai-hint={heroImage.imageHint}
-        />
-      )}
-      <div className="absolute inset-0 bg-black/70" />
-      <div className="relative z-10 flex flex-col items-center gap-2 p-4">
+    <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden text-center md:h-[80vh]">
+      <div className="flex flex-col items-center gap-2 p-4">
         <h1 className="font-headline font-bold uppercase leading-none tracking-tighter drop-shadow-lg">
           <span className="text-8xl bg-gradient-to-r from-accent to-destructive bg-clip-text text-transparent md:text-9xl">
             Chill

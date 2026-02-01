@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export const metadata: Metadata = {
   title: 'Chill Smoke Catalog',
@@ -12,6 +14,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const bgImage = PlaceHolderImages.find((p) => p.id === 'hero-background');
+
   return (
     <html lang="en" className="dark">
       <head>
@@ -22,7 +26,18 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased relative">
+        {bgImage && (
+          <Image
+            src={bgImage.imageUrl}
+            alt={bgImage.description}
+            fill
+            className="object-cover -z-10"
+            data-ai-hint={bgImage.imageHint}
+            priority
+          />
+        )}
+        <div className="absolute inset-0 bg-black/70 -z-10" />
         {children}
         <Toaster />
       </body>
