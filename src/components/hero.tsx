@@ -1,11 +1,25 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Instagram } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Hero() {
+  const logoImage = PlaceHolderImages.find((p) => p.id === 'hero-logo');
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4 overflow-visible">
+        {logoImage && (
+          <Image
+            src={logoImage.imageUrl}
+            alt={logoImage.description}
+            width={200}
+            height={200}
+            data-ai-hint={logoImage.imageHint}
+            className="mb-4"
+            priority
+          />
+        )}
         <h1 className="font-logo text-8xl uppercase tracking-widest text-white drop-shadow-[0_0_10px_hsl(var(--destructive))] md:text-9xl">
           Chill Smoke
         </h1>
