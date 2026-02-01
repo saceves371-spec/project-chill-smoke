@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Logo } from '@/components/icons';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Instagram } from 'lucide-react';
 
@@ -20,19 +19,25 @@ export function Hero() {
           data-ai-hint={heroImage.imageHint}
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-black/80 to-black/60" />
-      <div className="relative z-10 flex flex-col items-center gap-6 p-4 text-primary-foreground">
-        <Logo />
-        <h1 className="font-headline text-4xl font-bold uppercase tracking-wider text-primary drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] sm:text-5xl md:text-6xl">
-          Sabor que pega distinto
+      <div className="absolute inset-0 bg-black/70" />
+      <div className="relative z-10 flex flex-col items-center gap-2 p-4">
+        <h1 className="font-headline font-bold uppercase leading-none tracking-tighter drop-shadow-lg">
+          <span className="text-8xl bg-gradient-to-r from-accent to-destructive bg-clip-text text-transparent md:text-9xl">
+            Chill
+          </span>
+          <span className="block text-8xl text-white md:text-9xl">
+            Smoke
+          </span>
         </h1>
-        <p className="max-w-md text-lg text-muted-foreground">
-          Explora nuestro catálogo y haz tu pedido. La noche es tuya.
+
+        <p className="text-xl text-muted-foreground opacity-80">
+          Sabor que pega distinto
         </p>
+
         <Button
           asChild
           size="lg"
-          className="bg-accent text-accent-foreground shadow-lg transition-transform hover:scale-105 hover:bg-accent/90"
+          className="mt-6 rounded-full bg-accent px-8 text-accent-foreground shadow-lg shadow-accent/40 transition-all hover:scale-105 hover:bg-accent/90 hover:shadow-accent/60"
         >
           <Link href="https://www.instagram.com" target="_blank">
             <Instagram className="mr-2 h-5 w-5" />
