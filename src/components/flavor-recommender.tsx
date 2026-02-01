@@ -74,7 +74,7 @@ export function FlavorRecommender() {
                       <FormControl>
                         <Textarea
                           placeholder="Ej: Busco algo frutal y refrescante, que no sea muy dulce. Quizás con un toque de menta..."
-                          className="resize-none"
+                          className="resize-none bg-transparent border-white/20 placeholder:text-muted-foreground/80"
                           {...field}
                         />
                       </FormControl>
@@ -93,10 +93,10 @@ export function FlavorRecommender() {
 
           {isLoading && (
             <div className="flex animate-pulse flex-col gap-4 p-6 pt-0">
-               <div className="h-6 w-1/3 rounded-md bg-muted"></div>
+               <div className="h-6 w-1/3 rounded-md bg-muted/50"></div>
                <div className="space-y-2">
-                 <div className="h-4 w-full rounded-md bg-muted"></div>
-                 <div className="h-4 w-5/6 rounded-md bg-muted"></div>
+                 <div className="h-4 w-full rounded-md bg-muted/50"></div>
+                 <div className="h-4 w-5/6 rounded-md bg-muted/50"></div>
                </div>
             </div>
           )}
