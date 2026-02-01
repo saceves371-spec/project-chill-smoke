@@ -7,8 +7,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 export function Hero() {
   const logoImage = PlaceHolderImages.find((p) => p.id === 'hero-logo');
   return (
-    <section className="mb-12 flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center text-center md:h-[80vh]">
-      <div className="flex flex-col items-center gap-2 overflow-visible p-4">
+    <section className="mb-24 flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-start pt-20 text-center md:h-[80vh]">
+      <div className="flex flex-col items-center overflow-visible p-4">
         {logoImage && (
           <Image
             src={logoImage.imageUrl}
@@ -16,6 +16,7 @@ export function Hero() {
             width={400}
             height={400}
             data-ai-hint={logoImage.imageHint}
+            className=""
             priority
           />
         )}
@@ -27,7 +28,7 @@ export function Hero() {
         <Button
           asChild
           size="lg"
-          className="mt-6 rounded-full bg-gradient-to-r from-destructive to-accent px-8 text-accent-foreground shadow-[0_0_15px_hsl(var(--accent)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_25px_hsl(var(--accent)/0.7)]"
+          className="mt-8 rounded-full bg-gradient-to-r from-destructive to-accent px-8 text-accent-foreground shadow-[0_0_15px_hsl(var(--accent)/0.5)] transition-all hover:scale-105 hover:shadow-[0_0_25px_hsl(var(--accent)/0.7)]"
         >
           <Link href="https://www.instagram.com" target="_blank">
             <Instagram className="mr-2 h-5 w-5" />
