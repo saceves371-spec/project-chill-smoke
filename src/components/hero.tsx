@@ -14,8 +14,8 @@ export function Hero() {
           <Image
             src={logoImage.imageUrl}
             alt={logoImage.description}
-            width={600}
-            height={465}
+            width={512}
+            height={512}
             className="h-auto max-w-[90vw] md:max-w-xl"
             data-ai-hint={logoImage.imageHint}
             priority
