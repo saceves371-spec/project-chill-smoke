@@ -6,8 +6,8 @@ export function Hero() {
   return (
     <section className="flex h-[70vh] min-h-[500px] w-full flex-col items-center justify-center overflow-hidden text-center md:h-[80vh]">
       <div className="flex flex-col items-center gap-2 p-4">
-        <h1 className="font-headline font-bold uppercase leading-none tracking-tighter drop-shadow-lg">
-          <span className="text-8xl bg-gradient-to-r from-accent to-destructive bg-clip-text text-transparent md:text-9xl">
+        <h1 className="font-headline font-bold uppercase leading-none drop-shadow-lg">
+          <span className="text-8xl bg-gradient-to-r from-destructive to-accent bg-clip-text text-transparent md:text-9xl">
             Chill
           </span>
           <span className="block text-8xl text-white md:text-9xl">
