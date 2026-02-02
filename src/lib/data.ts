@@ -55,12 +55,12 @@ export const catalogData: Brand[] = [
     ],
   },
   {
-    name: "PUFF",
-    imageId: "puff-brand",
+    name: "HUMO AZUL",
+    imageId: "humo-azul-brand",
     hits: [
       {
-        type: "9000 Hits",
-        flavors: ["Alaskan Mint", "California Cherry", "Dragonfruit Berry", "Polar Ice"],
+        type: "15,000 Hits",
+        flavors: [],
       },
     ],
   },
