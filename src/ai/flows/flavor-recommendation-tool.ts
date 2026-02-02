@@ -54,26 +54,26 @@ const flavorRecommendationPrompt = ai.definePrompt({
   input: { schema: FlavorRecommendationWithCatalogInputSchema },
   output: { schema: FlavorRecommendationOutputSchema },
   prompt: `You are an expert vape flavor recommender for a store called "Chill Smoke".
-Your task is to recommend a single, specific vape flavor from the catalog provided, including its hit count if available.
+Your task is to recommend a single, specific vape flavor from the catalog provided, including its hit count if available. The user will ask in Spanish.
 
-**User Preferences:**
+**User Preferences (in Spanish):**
 "{{{tasteProfile}}}"
 
-**Available Product Catalog (Flavors only, no emojis):**
+**Available Product Catalog (Flavor names are in English, with emojis):**
 {{{catalog}}}
 
 **Instructions:**
-1.  Analyze the user's preferences for taste (e.g., fruity, fresh), type (e.g., number of hits), and any other keywords.
-2.  Carefully examine the provided catalog to find the best match.
-3.  Your response MUST be one of the flavors available in the catalog.
-4.  Provide a recommendation and a brief, friendly reasoning for your choice. If the user specifies a number of hits (e.g., "25,000 hits"), prioritize flavors from that category.
-5.  In your recommendation, also specify the brand and hit count to be helpful, for example "Black Cherry (GEEK BAR - 15,000 Hits)".
-6.  **Important**: Your final JSON output must not contain any emojis. The flavor names in the output should be clean.
+1.  **Analyze the user's request in Spanish.** Pay close attention to keywords describing flavors (e.g., "durazno" for peach, "frutal" for fruit), feelings (e.g., "fresco" for fresh/cool), and technical details like the number of "hits".
+2.  **Match the request to the catalog.** Use both the English flavor names and the associated emojis to find the best possible match. For example, a request for "durazno" can be matched with a flavor named "Peach" or one with a 🍑 emoji. A request for "fresco" could match with "mint", "ice", or flavors with ❄️.
+3.  **Select one flavor.** Your response MUST be one of the flavors available in the catalog.
+4.  **Provide helpful details.** In your recommendation, specify the brand and hit count, for example: "Black Cherry (GEEK BAR - 15,000 Hits)".
+5.  **Explain your choice in Spanish.** Give a brief, friendly reasoning for your recommendation.
+6.  **CRITICAL**: Your final JSON output must **NOT** contain any emojis. You will read emojis from the input catalog, but you must not write them in the \`flavorRecommendation\` field of the output.
 
 **Example Output:**
 {
-  "flavorRecommendation": "Blue Rancher (GEEK BAR - 25,000 Hits)",
-  "reasoning": "Claro, para algo frutal y de 25,000 hits, te recomiendo el Blue Rancher de GEEK BAR. Es un sabor dulce y ácido a la vez que seguro te va a gustar y cumple con los hits que buscas."
+  "flavorRecommendation": "White Peach Raspberry (GEEK BAR - 25,000 Hits)",
+  "reasoning": "¡Claro! Para algo con durazno, te recomiendo el White Peach Raspberry de GEEK BAR. Combina el dulce del durazno blanco con la frambuesa y es de 25,000 hits, aunque no es fresco/mentolado, su perfil frutal es excelente."
 }
 
 Flavor Recommendation:`,
@@ -86,7 +86,7 @@ const flavorRecommendationFlow = ai.defineFlow(
     outputSchema: FlavorRecommendationOutputSchema,
   },
   async input => {
-    // Helper to remove emojis and extra spaces
+    // Helper to remove emojis and extra spaces from the FINAL output.
     const cleanText = (str: string) =>
       str
         .replace(
@@ -96,7 +96,7 @@ const flavorRecommendationFlow = ai.defineFlow(
         .replace(/\s+/g, ' ')
         .trim();
 
-    // Convert catalog data to a simple string format for the prompt, stripping emojis
+    // Convert catalog data to a simple string format for the prompt, KEEPING emojis for better matching
     const catalogString = catalogData
       .map(
         brand =>
@@ -105,7 +105,9 @@ const flavorRecommendationFlow = ai.defineFlow(
             .map(
               hit =>
                 `  - ${hit.type}:\n` +
-                hit.flavors.map(flavor => `    - ${cleanText(flavor)}`).join('\n')
+                hit.flavors
+                  .map(flavor => `    - ${flavor.replace(/\s+/g, ' ').trim()}`)
+                  .join('\n')
             )
             .join('\n')
       )
@@ -120,6 +122,11 @@ const flavorRecommendationFlow = ai.defineFlow(
       throw new Error('No se pudo obtener una recomendación de la IA.');
     }
 
-    return output;
+    // Clean the flavor recommendation from the output, just in case the AI disobeys.
+    // The prompt already instructs the AI not to include emojis in the final output.
+    return {
+      flavorRecommendation: cleanText(output.flavorRecommendation),
+      reasoning: output.reasoning,
+    };
   }
 );
