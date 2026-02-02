@@ -42,7 +42,7 @@ export function ProductCatalog() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
                 {brand.name === 'IPLAY BOX' && (
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-10"
+                    className="absolute inset-0 bg-cover bg-center opacity-20"
                     style={{
                       backgroundImage: `url('https://pngimg.com/uploads/smoke/smoke_PNG55196.png')`,
                     }}
