@@ -28,7 +28,7 @@ export function ProductCatalog() {
               <AccordionItem
                 key={brand.name}
                 value={brand.name}
-                className="group relative overflow-hidden rounded-2xl border border-border/10 shadow-lg transition-all duration-300 ease-in-out hover:shadow-primary/20 border-b-0"
+                className="group relative overflow-hidden rounded-2xl border border-border/10 shadow-lg transition-all duration-300 ease-in-out hover:shadow-primary/20"
               >
                 {brandImage && (
                   <Image
@@ -40,7 +40,14 @@ export function ProductCatalog() {
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
-
+                {brand.name === 'IPLAY BOX' && (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-10"
+                    style={{
+                      backgroundImage: `url('https://pngimg.com/uploads/smoke/smoke_PNG55196.png')`,
+                    }}
+                  />
+                )}
                 <AccordionTrigger className="relative p-6 text-4xl font-bold uppercase text-white hover:no-underline md:p-8 md:text-5xl [&>svg]:h-8 [&>svg]:w-8 [&>svg]:text-accent">
                   {brand.name}
                 </AccordionTrigger>
