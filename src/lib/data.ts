@@ -17,12 +17,13 @@ export const catalogData: Brand[] = [
     imageId: "iplay-brand",
     hits: [
       {
-        type: "BC5000",
-        flavors: ["Sakura Grape", "Watermelon Ice", "Strawberry Mango", "Kiwi Passionfruit Guava"],
-      },
-      {
-        type: "TE6000",
-        flavors: ["Apple Peach", "Grape Ice", "Juicy Peach", "Strawberry Ice Cream"],
+        type: "15,000 Hits",
+        flavors: [
+          "México Mango 🥭🇲🇽",
+          "Pink drink 🌸🍹",
+          "Mango dragónfruit refresher 🥭🐉🍹",
+          "Kiwi starfruit refresher 🥝🍹",
+        ],
       },
     ],
   },
