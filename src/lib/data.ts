@@ -32,7 +32,14 @@ export const catalogData: Brand[] = [
     hits: [
       {
         type: "15,000 Hits",
-        flavors: ["Miami Mint", "Tropical Rainbow Blast", "White Gummy Ice", "Sour Apple Ice"],
+        flavors: [
+          "Black Cherry 🫐",
+          "Blue razz ice 💠❄️",
+          "Pink lemonade 🌸🍸",
+          "Cherry bomb 🍒💣",
+          "Sour watermelon drop 🍉",
+          "Frozen Blackberry fab 🫐❄️",
+        ],
       },
       {
         type: "25,000 Hits",
