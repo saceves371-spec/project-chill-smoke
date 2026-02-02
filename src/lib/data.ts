@@ -43,7 +43,13 @@ export const catalogData: Brand[] = [
       },
       {
         type: "25,000 Hits",
-        flavors: ["Meta Moon", "Cherry Bomb", "Blueberry Watermelon", "Pink Lemonade"],
+        flavors: [
+          "Pink y blue 🌸💠",
+          "Blue rancher 💠🍬",
+          "RASPBERRY jam 🍒",
+          "Cool mint 🌿❄️",
+          "White peach raspberry 🍑🫐",
+        ],
       },
     ],
   },
