@@ -60,7 +60,7 @@ export const catalogData: Brand[] = [
     hits: [
       {
         type: "15,000 Hits",
-        flavors: [],
+        flavors: ["Grape ice 🍇❄️"],
       },
     ],
   },
