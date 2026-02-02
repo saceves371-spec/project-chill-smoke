@@ -98,6 +98,12 @@ export function ProductCatalog() {
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-40"
+              style={{
+                backgroundImage: `url('https://pngimg.com/uploads/smoke/smoke_PNG55196.png')`,
+              }}
+            />
             <AccordionTrigger className="relative p-6 text-4xl font-bold uppercase text-white hover:no-underline md:p-8 md:text-5xl [&>svg]:h-8 [&>svg]:w-8 [&>svg]:text-accent">
               {plumasData.name}
             </AccordionTrigger>
