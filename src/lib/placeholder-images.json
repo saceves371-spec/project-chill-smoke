@@ -13,8 +13,8 @@
       "imageHint": "smoke texture"
     },
     {
-      "id": "vapo-brand",
-      "description": "Background image for Vaporesso brand.",
+      "id": "core-brand",
+      "description": "Background image for CORE brand.",
       "imageUrl": "https://images.unsplash.com/photo-1739784804122-7bd875caeaf3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2YXBlJTIwbGlmZXN0eWxlfGVufDB8fHx8MTc2OTkxNTA4NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "vape lifestyle"
     },

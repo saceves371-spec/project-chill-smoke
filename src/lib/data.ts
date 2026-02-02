@@ -65,26 +65,12 @@ export const catalogData: Brand[] = [
     ],
   },
   {
-    name: 'Vaporesso',
-    imageId: 'vapo-brand',
+    name: 'CORE',
+    imageId: 'core-brand',
     hits: [
       {
-        type: '5000 Hits',
-        flavors: [
-          'Cool Mint (menta, fresco)',
-          'Blue Razz Ice (frambuesa azul, hielo, fresco)',
-          'Lush Ice (sandía, hielo, fresco)',
-          'Mango Peach (mango, durazno)',
-        ],
-      },
-      {
-        type: '8000 Hits',
-        flavors: [
-          'Strawberry Kiwi (fresa, kiwi)',
-          'Watermelon Bubblegum (sandía, chicle)',
-          'Grape Energy (uva, bebida energética)',
-          'Peach Mango Watermelon (durazno, mango, sandía)',
-        ],
+        type: '12,000 Hits',
+        flavors: ['Strawberry Cherry 🍉🍒 (fresa, cereza)'],
       },
     ],
   },
