@@ -2,16 +2,16 @@
 'use server';
 
 /**
- * @fileOverview A tool that suggests vape flavors based on user preferences.
+ * @fileOverview A tool that suggests vape flavors or pens based on user preferences.
  *
- * - recommendFlavor - A function that recommends vape flavors.
+ * - recommendFlavor - A function that recommends vape flavors or pens.
  * - FlavorRecommendationInput - The input type for the recommendFlavor function.
  * - FlavorRecommendationOutput - The return type for the recommendFlavor function.
  */
 
 import { ai } from '@/ai/genkit';
 import { z } from 'genkit';
-import { catalogData } from '@/lib/data';
+import { catalogData, plumasData } from '@/lib/data';
 
 const FlavorRecommendationInputSchema = z.object({
   tasteProfile: z
@@ -27,11 +27,11 @@ export type FlavorRecommendationInput = z.infer<
 const FlavorRecommendationOutputSchema = z.object({
   flavorRecommendation: z
     .string()
-    .describe('The vape flavor recommended based on user taste profile.'),
+    .describe('The vape flavor or pen recommended based on user preferences.'),
   reasoning: z
     .string()
     .describe(
-      'The reasoning for recommending the specific vape flavor, including why it matches the user taste profile, mood, or food pairings.'
+      'The reasoning for recommending the specific product, including why it matches the user preferences.'
     ),
 });
 export type FlavorRecommendationOutput = z.infer<
@@ -46,30 +46,49 @@ export async function recommendFlavor(
 
 const FlavorRecommendationWithCatalogInputSchema = z.object({
   tasteProfile: z.string(),
-  catalog: z.string(),
+  vapeCatalog: z.string(),
+  plumasCatalog: z.string(),
 });
 
 const flavorRecommendationPrompt = ai.definePrompt({
   name: 'flavorRecommendationPrompt',
   input: { schema: FlavorRecommendationWithCatalogInputSchema },
   output: { schema: FlavorRecommendationOutputSchema },
-  prompt: `You are an expert vape flavor recommender for a store called "Chill Smoke".
-Your task is to recommend a single, specific vape flavor from the catalog provided. The user will ask in Spanish. The catalog has English flavor names, but also contains Spanish keywords in parentheses to help you.
+  prompt: `You are an expert product recommender for a store called "Chill Smoke".
+Your task is to recommend a single, specific product from the catalogs provided, based on the user's request in Spanish.
 
 **User Preferences (in Spanish):**
 "{{{tasteProfile}}}"
 
-**Available Product Catalog:**
-{{{catalog}}}
+You have two product catalogs:
 
-**Instructions:**
-1.  **Analyze the user's request.** Look for keywords describing flavors (e.g., "durazno"), feelings (e.g., "fresco"), or technical details (e.g., "15,000 hits").
-2.  **Find the best match.** Use the user's keywords to find the best matching flavor in the catalog. The Spanish keywords in parentheses are your primary guide.
-3.  **Format your response:**
-    *   **flavorRecommendation**: State the full flavor name, brand, and hit count. For example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)". You MUST NOT include the Spanish keywords from the parenthesis in this field.
-    *   **reasoning**: Explain in Spanish why you chose this flavor.
+**1. Vapes Desechables (Disposable Vapes):**
+This catalog contains vapes with various flavors. The flavor names are in English, but include Spanish keywords in parentheses to help you find a match (e.g., 'mango', 'fresa', 'fresco').
+{{{vapeCatalog}}}
 
-**IMPORTANT:** If you cannot find a suitable flavor, you MUST respond in the correct format. For \`flavorRecommendation\`, use the text "No se encontró un sabor ideal". For \`reasoning\`, politely explain in Spanish that no match was found and suggest the user describe their preference differently.`,
+**2. Plumas (Pens):**
+This catalog contains THC pens.
+{{{plumasCatalog}}}
+
+---
+
+**YOUR TASK:**
+
+1.  **Analyze the user's request.** First, determine if the user is asking for a "pluma". Look for the word "pluma" (or its variations) in their request.
+
+2.  **Choose the correct catalog to search.**
+    *   If the request contains "pluma", you MUST recommend an item ONLY from the "Plumas" catalog.
+    *   If the request does NOT contain "pluma", you MUST recommend an item ONLY from the "Vapes Desechables" catalog.
+
+3.  **Find the best match.** Based on the user's description (flavors, feelings, etc.), find the single best matching product in the chosen catalog.
+
+4.  **Format your response as follows:**
+    *   **flavorRecommendation**: State the full product name.
+        *   *For Vapes*: State the full flavor name, brand, and hit count. Example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)".
+        *   *For Plumas*: State the name and price. Example: "Pluma Recargable 1g ($650)".
+    *   **reasoning**: Explain in Spanish why you chose this product, connecting it to the user's preferences.
+
+**IMPORTANT:** If you cannot find a suitable product in the corresponding catalog, you MUST respond with "No se encontró un producto ideal" for the \`flavorRecommendation\` field, and politely explain why in the \`reasoning\` field in Spanish.`,
 });
 
 const flavorRecommendationFlow = ai.defineFlow(
@@ -79,8 +98,8 @@ const flavorRecommendationFlow = ai.defineFlow(
     outputSchema: FlavorRecommendationOutputSchema,
   },
   async input => {
-    // Convert catalog data to a simple string format for the prompt, KEEPING emojis and keywords.
-    const catalogString = catalogData
+    // Vapes catalog string
+    const vapeCatalogString = catalogData
       .map(
         brand =>
           `Brand: ${brand.name}\n` +
@@ -96,9 +115,15 @@ const flavorRecommendationFlow = ai.defineFlow(
       )
       .join('\n\n');
 
+    // Plumas catalog string
+    const plumasCatalogString = plumasData.items
+      .map(item => `- Name: ${item.name}, Description: ${item.description}, Price: ${item.price}`)
+      .join('\n');
+
     const { output } = await flavorRecommendationPrompt({
       tasteProfile: input.tasteProfile,
-      catalog: catalogString,
+      vapeCatalog: vapeCatalogString,
+      plumasCatalog: plumasCatalogString,
     });
 
     if (!output) {
