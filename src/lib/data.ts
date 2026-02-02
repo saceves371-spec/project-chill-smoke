@@ -31,11 +31,11 @@ export const catalogData: Brand[] = [
     imageId: "geek-brand",
     hits: [
       {
-        type: "6000 Hits",
+        type: "15,000 Hits",
         flavors: ["Miami Mint", "Tropical Rainbow Blast", "White Gummy Ice", "Sour Apple Ice"],
       },
       {
-        type: "10000 Hits",
+        type: "25,000 Hits",
         flavors: ["Meta Moon", "Cherry Bomb", "Blueberry Watermelon", "Pink Lemonade"],
       },
     ],
