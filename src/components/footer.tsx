@@ -1,8 +1,17 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Instagram } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export function Footer() {
+  const [year, setYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="w-full bg-transparent py-16">
       <div className="container mx-auto flex max-w-3xl flex-col items-center gap-12 px-4">
@@ -30,7 +39,7 @@ export function Footer() {
             <span className="font-semibold">@chillsmokegdl</span>
           </Link>
           <p className="text-xs text-muted-foreground/70">
-            © {new Date().getFullYear()} Chill Smoke. Uso responsable +18.
+            © {year} Chill Smoke. Uso responsable +18.
           </p>
         </div>
       </div>
