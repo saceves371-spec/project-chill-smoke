@@ -67,7 +67,7 @@ This catalog contains vapes with various flavors. The flavor names are in Englis
 {{{vapeCatalog}}}
 
 **2. Plumas (Pens):**
-This catalog contains THC pens.
+This catalog contains THC pens with different brands for each type.
 {{{plumasCatalog}}}
 
 ---
@@ -80,15 +80,15 @@ This catalog contains THC pens.
     *   If the request contains "pluma", you MUST recommend an item ONLY from the "Plumas" catalog.
     *   If the request does NOT contain "pluma", you MUST recommend an item ONLY from the "Vapes Desechables" catalog.
 
-3.  **Find the best match.** Based on the user's description (flavors, feelings, etc.), find the single best matching product in the chosen catalog.
+3.  **Find the best match.** Based on the user's description (flavors, feelings, etc.), find the single best matching product in the chosen catalog. For Plumas, you can match based on the description which includes SATIVA, INDICA, or HIBRIDA.
 
 4.  **Format your response as follows:**
     *   **flavorRecommendation**: State the full product name.
         *   *For Vapes*: State the full flavor name, brand, and hit count. Example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)".
-        *   *For Plumas*: State the name. Example: "Pluma USA".
+        *   *For Plumas*: State the type and suggest one of the available brands. Example: "Pluma USA, marca MUHAMEDS".
     *   **reasoning**: Explain in Spanish why you chose this product, connecting it to the user's preferences.
 
-**IMPORTANT:** If you cannot find a suitable product in the corresponding catalog, you MUST respond with "No se encontró un producto ideal" for the \`flavorRecommendation\` field, and politely explain why in the \`reasoning\` field in Spanish.`,
+**IMPORTANT:** If you cannot find a suitable product in the corresponding catalog, you MUST respond with "No se encontró un producto ideal" for the \`flavorRecommendation\` field, and politely explain why in the \`reasoning\` field in Spanish. For example, if a user asks for a pluma with a specific fruit flavor, you should explain that plumas are categorized by SATIVA/INDICA/HIBRIDA and not by fruit flavors.`,
 });
 
 const flavorRecommendationFlow = ai.defineFlow(
@@ -117,8 +117,13 @@ const flavorRecommendationFlow = ai.defineFlow(
 
     // Plumas catalog string
     const plumasCatalogString = plumasData.items
-      .map(item => `- Name: ${item.name}, Description: ${item.description}`)
-      .join('\n');
+      .map(
+        item =>
+          `- Tipo: ${item.name}\n` +
+          `  Descripción: ${item.description}\n` +
+          `  Marcas: ${item.brands.join(', ')}`
+      )
+      .join('\n\n');
 
     const { output } = await flavorRecommendationPrompt({
       tasteProfile: input.tasteProfile,

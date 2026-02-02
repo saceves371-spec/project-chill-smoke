@@ -108,17 +108,30 @@ export function ProductCatalog() {
               {plumasData.name}
             </AccordionTrigger>
             <AccordionContent className="relative bg-background/95 p-6 pt-0 backdrop-blur-sm">
-              <ul className="space-y-4 pt-4">
+              <h3 className="mb-4 text-xl font-semibold text-primary">Tipos de Plumas</h3>
+              <Accordion type="multiple" className="w-full space-y-2">
                 {plumasData.items.map((item) => (
-                  <li
-                    key={item.name}
-                    className="rounded-lg border border-border/20 bg-foreground/5 p-4"
+                  <AccordionItem
+                    value={`pluma-${item.name}`}
+                    key={`pluma-${item.name}`}
+                    className="rounded-lg border border-border/20 bg-foreground/5 data-[state=open]:bg-foreground/10"
                   >
-                    <h4 className="text-lg font-bold text-primary">{item.name}</h4>
-                    <p className="text-muted-foreground">{item.description}</p>
-                  </li>
+                    <AccordionTrigger className="px-6 py-4 text-base font-medium text-foreground hover:no-underline">
+                      {item.name}
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6">
+                      <p className="pb-2 text-sm text-muted-foreground">{item.description}</p>
+                      <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
+                        {item.brands.map((brand) => (
+                          <li key={brand} className="text-muted-foreground">
+                            {brand}
+                          </li>
+                        ))}
+                      </ul>
+                    </AccordionContent>
+                  </AccordionItem>
                 ))}
-              </ul>
+              </Accordion>
             </AccordionContent>
           </AccordionItem>
         </Accordion>

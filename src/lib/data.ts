@@ -76,15 +76,18 @@ export const catalogData: Brand[] = [
   },
 ];
 
-export type Pluma = {
+export type PlumaBrand = string;
+
+export type PlumaType = {
   name: string;
   description: string;
+  brands: PlumaBrand[];
 };
 
 export type PlumasCategory = {
   name: string;
   imageId: string;
-  items: Pluma[];
+  items: PlumaType[];
 };
 
 export const plumasData: PlumasCategory = {
@@ -94,10 +97,23 @@ export const plumasData: PlumasCategory = {
     {
       name: 'Pluma USA',
       description: 'SATIVA - INDICA - HIBRIDA',
+      brands: ['MUHAMEDS', 'FADE', 'STONER STIX', 'LUIGI'],
     },
     {
       name: 'Pluma MX',
       description: 'SATIVA - INDICA - HIBRIDA',
+      brands: [
+        'FRYD',
+        'BODEGA BOYS',
+        'MUHAMEDS',
+        'SAUCE',
+        'PACK MAN',
+        'PACKWOODS',
+        'JEETER',
+        'COOKIES FREAK',
+        'FUSIÓN',
+        'CARNIVAL',
+      ],
     },
   ],
 };
