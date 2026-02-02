@@ -94,12 +94,12 @@ export const plumasData: PlumasCategory = {
   items: [
     {
       name: 'Pluma USA',
-      description: 'THC-A + THC-P + DELTA 8',
+      description: 'SATIVA - INDICA - HIBRIDA',
       price: '$650',
     },
     {
       name: 'Pluma MX',
-      description: 'THC-A + HXY-11',
+      description: 'SATIVA - INDICA - HIBRIDA',
       price: '$850',
     },
   ],
