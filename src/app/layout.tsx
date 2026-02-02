@@ -17,7 +17,7 @@ export default function RootLayout({
   const bgImage = PlaceHolderImages.find((p) => p.id === 'hero-background');
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
