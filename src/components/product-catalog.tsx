@@ -59,7 +59,7 @@ export function ProductCatalog() {
                           <AccordionContent className="px-6">
                             <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
                               {hit.flavors.map((flavor) => (
-                                <li key={flavor} className="text-muted-foreground whitespace-nowrap">
+                                <li key={flavor} className="text-muted-foreground">
                                   {flavor}
                                 </li>
                               ))}
