@@ -59,7 +59,7 @@ Your task is to recommend a single, specific vape flavor from the catalog provid
 **User Preferences:**
 "{{{tasteProfile}}}"
 
-**Available Product Catalog:**
+**Available Product Catalog (Flavors only, no emojis):**
 {{{catalog}}}
 
 **Instructions:**
@@ -68,6 +68,7 @@ Your task is to recommend a single, specific vape flavor from the catalog provid
 3.  Your response MUST be one of the flavors available in the catalog.
 4.  Provide a recommendation and a brief, friendly reasoning for your choice. If the user specifies a number of hits (e.g., "25,000 hits"), prioritize flavors from that category.
 5.  In your recommendation, also specify the brand and hit count to be helpful, for example "Black Cherry (GEEK BAR - 15,000 Hits)".
+6.  **Important**: Your final JSON output must not contain any emojis. The flavor names in the output should be clean.
 
 **Example Output:**
 {
@@ -85,7 +86,17 @@ const flavorRecommendationFlow = ai.defineFlow(
     outputSchema: FlavorRecommendationOutputSchema,
   },
   async input => {
-    // Convert catalog data to a simple string format for the prompt
+    // Helper to remove emojis and extra spaces
+    const cleanText = (str: string) =>
+      str
+        .replace(
+          /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
+          ''
+        )
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    // Convert catalog data to a simple string format for the prompt, stripping emojis
     const catalogString = catalogData
       .map(
         brand =>
@@ -94,7 +105,7 @@ const flavorRecommendationFlow = ai.defineFlow(
             .map(
               hit =>
                 `  - ${hit.type}:\n` +
-                hit.flavors.map(flavor => `    - ${flavor}`).join('\n')
+                hit.flavors.map(flavor => `    - ${cleanText(flavor)}`).join('\n')
             )
             .join('\n')
       )
