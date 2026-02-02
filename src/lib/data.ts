@@ -79,7 +79,6 @@ export const catalogData: Brand[] = [
 export type Pluma = {
   name: string;
   description: string;
-  price: string;
 };
 
 export type PlumasCategory = {
@@ -95,12 +94,10 @@ export const plumasData: PlumasCategory = {
     {
       name: 'Pluma USA',
       description: 'SATIVA - INDICA - HIBRIDA',
-      price: '$650',
     },
     {
       name: 'Pluma MX',
       description: 'SATIVA - INDICA - HIBRIDA',
-      price: '$850',
     },
   ],
 };

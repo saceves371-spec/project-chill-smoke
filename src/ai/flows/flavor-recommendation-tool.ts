@@ -85,7 +85,7 @@ This catalog contains THC pens.
 4.  **Format your response as follows:**
     *   **flavorRecommendation**: State the full product name.
         *   *For Vapes*: State the full flavor name, brand, and hit count. Example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)".
-        *   *For Plumas*: State the name and price. Example: "Pluma USA ($650)".
+        *   *For Plumas*: State the name. Example: "Pluma USA".
     *   **reasoning**: Explain in Spanish why you chose this product, connecting it to the user's preferences.
 
 **IMPORTANT:** If you cannot find a suitable product in the corresponding catalog, you MUST respond with "No se encontró un producto ideal" for the \`flavorRecommendation\` field, and politely explain why in the \`reasoning\` field in Spanish.`,
@@ -117,7 +117,7 @@ const flavorRecommendationFlow = ai.defineFlow(
 
     // Plumas catalog string
     const plumasCatalogString = plumasData.items
-      .map(item => `- Name: ${item.name}, Description: ${item.description}, Price: ${item.price}`)
+      .map(item => `- Name: ${item.name}, Description: ${item.description}`)
       .join('\n');
 
     const { output } = await flavorRecommendationPrompt({

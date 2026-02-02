@@ -116,7 +116,6 @@ export function ProductCatalog() {
                   >
                     <h4 className="text-lg font-bold text-primary">{item.name}</h4>
                     <p className="text-muted-foreground">{item.description}</p>
-                    <p className="mt-1 font-semibold text-foreground">{item.price}</p>
                   </li>
                 ))}
               </ul>
