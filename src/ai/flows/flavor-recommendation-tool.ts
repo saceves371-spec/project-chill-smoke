@@ -54,22 +54,22 @@ const flavorRecommendationPrompt = ai.definePrompt({
   input: { schema: FlavorRecommendationWithCatalogInputSchema },
   output: { schema: FlavorRecommendationOutputSchema },
   prompt: `You are an expert vape flavor recommender for a store called "Chill Smoke".
-Your task is to recommend a single, specific vape flavor from the catalog provided. The user will ask in Spanish.
+Your task is to recommend a single, specific vape flavor from the catalog provided. The user will ask in Spanish. The catalog has English flavor names, but also contains Spanish keywords in parentheses to help you.
 
 **User Preferences (in Spanish):**
 "{{{tasteProfile}}}"
 
-**Available Product Catalog (Flavor names are in English, with emojis):**
+**Available Product Catalog:**
 {{{catalog}}}
 
 **Instructions:**
-1.  **Analyze the user's request in Spanish.** Pay close attention to keywords describing flavors (e.g., "durazno" for peach, "frutal" for fruit), feelings (e.g., "fresco" for fresh/cool), and technical details like the number of "hits".
-2.  **Match the request to the catalog.** Use both the English flavor names and the associated emojis to find the best possible match. For example, a request for "durazno" can be matched with a flavor named "Peach" or one with a 🍑 emoji. A request for "fresco" could match with "mint", "ice", or flavors with ❄️.
-3.  **Select ONE flavor.** Your response MUST be one of the flavors available in the catalog.
-4.  **Format your recommendation.** In the 'flavorRecommendation' field of your response, specify the brand and hit count, for example: "Black Cherry (GEEK BAR - 15,000 Hits)".
-5.  **Explain your choice in Spanish.** Give a brief, friendly reasoning for your recommendation in the 'reasoning' field.
+1.  **Analyze the user's request.** Look for keywords describing flavors (e.g., "durazno"), feelings (e.g., "fresco"), or technical details (e.g., "15,000 hits").
+2.  **Find the best match.** Use the user's keywords to find the best matching flavor in the catalog. The Spanish keywords in parentheses are your primary guide.
+3.  **Format your response:**
+    *   **flavorRecommendation**: State the full flavor name, brand, and hit count. For example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)". You MUST NOT include the Spanish keywords from the parenthesis in this field.
+    *   **reasoning**: Explain in Spanish why you chose this flavor.
 
-Flavor Recommendation:`,
+**IMPORTANT:** If you cannot find a suitable flavor, you MUST respond in the correct format. For \`flavorRecommendation\`, use the text "No se encontró un sabor ideal". For \`reasoning\`, politely explain in Spanish that no match was found and suggest the user describe their preference differently.`,
 });
 
 const flavorRecommendationFlow = ai.defineFlow(
@@ -79,17 +79,7 @@ const flavorRecommendationFlow = ai.defineFlow(
     outputSchema: FlavorRecommendationOutputSchema,
   },
   async input => {
-    // Helper to remove emojis and extra spaces from the FINAL output.
-    const cleanText = (str: string) =>
-      str
-        .replace(
-          /([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g,
-          ''
-        )
-        .replace(/\s+/g, ' ')
-        .trim();
-
-    // Convert catalog data to a simple string format for the prompt, KEEPING emojis for better matching
+    // Convert catalog data to a simple string format for the prompt, KEEPING emojis and keywords.
     const catalogString = catalogData
       .map(
         brand =>
@@ -99,7 +89,7 @@ const flavorRecommendationFlow = ai.defineFlow(
               hit =>
                 `  - ${hit.type}:\n` +
                 hit.flavors
-                  .map(flavor => `    - ${flavor.replace(/\s+/g, ' ').trim()}`)
+                  .map(flavor => `    - ${flavor}`)
                   .join('\n')
             )
             .join('\n')
@@ -115,10 +105,6 @@ const flavorRecommendationFlow = ai.defineFlow(
       throw new Error('No se pudo obtener una recomendación de la IA.');
     }
 
-    // Clean the flavor recommendation from the output, just in case the AI includes emojis.
-    return {
-      flavorRecommendation: cleanText(output.flavorRecommendation),
-      reasoning: output.reasoning,
-    };
+    return output;
   }
 );

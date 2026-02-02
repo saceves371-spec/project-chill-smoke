@@ -13,68 +13,78 @@ export type Brand = {
 
 export const catalogData: Brand[] = [
   {
-    name: "IPLAY BOX",
-    imageId: "iplay-brand",
+    name: 'IPLAY BOX',
+    imageId: 'iplay-brand',
     hits: [
       {
-        type: "15,000 Hits",
+        type: '15,000 Hits',
         flavors: [
-          "México Mango 🥭🇲🇽",
-          "Pink drink 🌸🍹",
-          "Mango dragónfruit refresher 🥭🐉🍹",
-          "Kiwi starfruit refresher 🥝🍹",
+          'México Mango 🥭🇲🇽 (mango, méxico)',
+          'Pink drink 🌸🍹 (bebida rosa, fresa, acai)',
+          'Mango dragónfruit refresher 🥭🐉🍹 (mango, pitahaya)',
+          'Kiwi starfruit refresher 🥝🍹 (kiwi, carambola)',
         ],
       },
     ],
   },
   {
-    name: "GEEK BAR",
-    imageId: "geek-brand",
+    name: 'GEEK BAR',
+    imageId: 'geek-brand',
     hits: [
       {
-        type: "15,000 Hits",
+        type: '15,000 Hits',
         flavors: [
-          "Black Cherry 🫐",
-          "Blue razz ice 💠❄️",
-          "Pink lemonade 🌸🍸",
-          "Cherry bomb 🍒💣",
-          "Sour watermelon drop 🍉",
-          "Frozen Blackberry fab 🫐❄️",
+          'Black Cherry 🫐 (cereza negra)',
+          'Blue razz ice 💠❄️ (frambuesa azul, hielo, fresco)',
+          'Pink lemonade 🌸🍸 (limonada rosa)',
+          'Cherry bomb 🍒💣 (cereza, explosión)',
+          'Sour watermelon drop 🍉 (sandía ácida)',
+          'Frozen Blackberry fab 🫐❄️ (mora, helado, fresco)',
         ],
       },
       {
-        type: "25,000 Hits",
+        type: '25,000 Hits',
         flavors: [
-          "Pink y blue 🌸💠",
-          "Blue rancher 💠🍬",
-          "RASPBERRY jam 🍒",
-          "Cool mint 🌿❄️",
-          "White peach raspberry 🍑🫐",
+          'Pink y blue 🌸💠 (rosa, azul, algodón de azúcar)',
+          'Blue rancher 💠🍬 (caramelo, frambuesa azul)',
+          'RASPBERRY jam 🍒 (mermelada de frambuesa)',
+          'Cool mint 🌿❄️ (menta, fresco)',
+          'White peach raspberry 🍑🫐 (durazno blanco, frambuesa)',
         ],
       },
     ],
   },
   {
-    name: "HUMO AZUL",
-    imageId: "humo-azul-brand",
+    name: 'HUMO AZUL',
+    imageId: 'humo-azul-brand',
     hits: [
       {
-        type: "15,000 Hits",
-        flavors: ["Grape ice 🍇❄️"],
+        type: '15,000 Hits',
+        flavors: ['Grape ice 🍇❄️ (uva, hielo, fresco)'],
       },
     ],
   },
-    {
-    name: "Vaporesso",
-    imageId: "vapo-brand",
+  {
+    name: 'Vaporesso',
+    imageId: 'vapo-brand',
     hits: [
       {
-        type: "5000 Hits",
-        flavors: ["Cool Mint", "Blue Razz Ice", "Lush Ice", "Mango Peach"],
+        type: '5000 Hits',
+        flavors: [
+          'Cool Mint (menta, fresco)',
+          'Blue Razz Ice (frambuesa azul, hielo, fresco)',
+          'Lush Ice (sandía, hielo, fresco)',
+          'Mango Peach (mango, durazno)',
+        ],
       },
       {
-        type: "8000 Hits",
-        flavors: ["Strawberry Kiwi", "Watermelon Bubblegum", "Grape Energy", "Peach Mango Watermelon"],
+        type: '8000 Hits',
+        flavors: [
+          'Strawberry Kiwi (fresa, kiwi)',
+          'Watermelon Bubblegum (sandía, chicle)',
+          'Grape Energy (uva, bebida energética)',
+          'Peach Mango Watermelon (durazno, mango, sandía)',
+        ],
       },
     ],
   },
