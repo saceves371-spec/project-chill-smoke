@@ -93,12 +93,12 @@ export const plumasData: PlumasCategory = {
   imageId: 'plumas-brand',
   items: [
     {
-      name: 'Pluma Recargable 1g',
+      name: 'Pluma USA',
       description: 'THC-A + THC-P + DELTA 8',
       price: '$650',
     },
     {
-      name: 'Pluma Desechable 2g',
+      name: 'Pluma MX',
       description: 'THC-A + HXY-11',
       price: '$850',
     },
