@@ -13,7 +13,7 @@ export type Brand = {
 
 export const catalogData: Brand[] = [
   {
-    name: "ELF BAR",
+    name: "IPLAY BOX",
     imageId: "elf-brand",
     hits: [
       {
