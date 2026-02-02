@@ -54,7 +54,7 @@ const flavorRecommendationPrompt = ai.definePrompt({
   input: { schema: FlavorRecommendationWithCatalogInputSchema },
   output: { schema: FlavorRecommendationOutputSchema },
   prompt: `You are an expert vape flavor recommender for a store called "Chill Smoke".
-Your task is to recommend a single, specific vape flavor from the catalog provided, including its hit count if available. The user will ask in Spanish.
+Your task is to recommend a single, specific vape flavor from the catalog provided. The user will ask in Spanish.
 
 **User Preferences (in Spanish):**
 "{{{tasteProfile}}}"
@@ -65,16 +65,9 @@ Your task is to recommend a single, specific vape flavor from the catalog provid
 **Instructions:**
 1.  **Analyze the user's request in Spanish.** Pay close attention to keywords describing flavors (e.g., "durazno" for peach, "frutal" for fruit), feelings (e.g., "fresco" for fresh/cool), and technical details like the number of "hits".
 2.  **Match the request to the catalog.** Use both the English flavor names and the associated emojis to find the best possible match. For example, a request for "durazno" can be matched with a flavor named "Peach" or one with a 🍑 emoji. A request for "fresco" could match with "mint", "ice", or flavors with ❄️.
-3.  **Select one flavor.** Your response MUST be one of the flavors available in the catalog.
-4.  **Provide helpful details.** In your recommendation, specify the brand and hit count, for example: "Black Cherry (GEEK BAR - 15,000 Hits)".
-5.  **Explain your choice in Spanish.** Give a brief, friendly reasoning for your recommendation.
-6.  **CRITICAL**: Your final JSON output must **NOT** contain any emojis. You will read emojis from the input catalog, but you must not write them in the \`flavorRecommendation\` field of the output.
-
-**Example Output:**
-{
-  "flavorRecommendation": "White Peach Raspberry (GEEK BAR - 25,000 Hits)",
-  "reasoning": "¡Claro! Para algo con durazno, te recomiendo el White Peach Raspberry de GEEK BAR. Combina el dulce del durazno blanco con la frambuesa y es de 25,000 hits, aunque no es fresco/mentolado, su perfil frutal es excelente."
-}
+3.  **Select ONE flavor.** Your response MUST be one of the flavors available in the catalog.
+4.  **Format your recommendation.** In the 'flavorRecommendation' field of your response, specify the brand and hit count, for example: "Black Cherry (GEEK BAR - 15,000 Hits)".
+5.  **Explain your choice in Spanish.** Give a brief, friendly reasoning for your recommendation in the 'reasoning' field.
 
 Flavor Recommendation:`,
 });
@@ -122,8 +115,7 @@ const flavorRecommendationFlow = ai.defineFlow(
       throw new Error('No se pudo obtener una recomendación de la IA.');
     }
 
-    // Clean the flavor recommendation from the output, just in case the AI disobeys.
-    // The prompt already instructs the AI not to include emojis in the final output.
+    // Clean the flavor recommendation from the output, just in case the AI includes emojis.
     return {
       flavorRecommendation: cleanText(output.flavorRecommendation),
       reasoning: output.reasoning,
