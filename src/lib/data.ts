@@ -75,3 +75,32 @@ export const catalogData: Brand[] = [
     ],
   },
 ];
+
+export type Pluma = {
+  name: string;
+  description: string;
+  price: string;
+};
+
+export type PlumasCategory = {
+  name: string;
+  imageId: string;
+  items: Pluma[];
+};
+
+export const plumasData: PlumasCategory = {
+  name: 'Plumas',
+  imageId: 'plumas-brand',
+  items: [
+    {
+      name: 'Pluma Recargable 1g',
+      description: 'THC-A + THC-P + DELTA 8',
+      price: '$650',
+    },
+    {
+      name: 'Pluma Desechable 2g',
+      description: 'THC-A + HXY-11',
+      price: '$850',
+    },
+  ],
+};

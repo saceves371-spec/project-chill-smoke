@@ -5,10 +5,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { catalogData } from '@/lib/data';
+import { catalogData, plumasData } from '@/lib/data';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProductCatalog() {
+  const plumasImage = PlaceHolderImages.find((p) => p.id === plumasData.imageId);
+
   return (
     <section id="catalog" className="w-full py-12 md:py-20">
       <div className="container mx-auto px-4">
@@ -42,7 +44,7 @@ export function ProductCatalog() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
                 {brand.name === 'IPLAY BOX' && (
                   <div
-                    className="absolute inset-0 bg-cover bg-center opacity-20"
+                    className="absolute inset-0 bg-cover bg-center opacity-40"
                     style={{
                       backgroundImage: `url('https://pngimg.com/uploads/smoke/smoke_PNG55196.png')`,
                     }}
@@ -79,6 +81,41 @@ export function ProductCatalog() {
               </AccordionItem>
             );
           })}
+
+          {/* Plumas section */}
+          <AccordionItem
+            key={plumasData.name}
+            value={plumasData.name}
+            className="group relative overflow-hidden rounded-2xl border border-border/10 shadow-lg transition-all duration-300 ease-in-out hover:shadow-primary/20"
+          >
+            {plumasImage && (
+              <Image
+                src={plumasImage.imageUrl}
+                alt={`Background for ${plumasData.name}`}
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                data-ai-hint={plumasImage.imageHint}
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
+            <AccordionTrigger className="relative p-6 text-4xl font-bold uppercase text-white hover:no-underline md:p-8 md:text-5xl [&>svg]:h-8 [&>svg]:w-8 [&>svg]:text-accent">
+              {plumasData.name}
+            </AccordionTrigger>
+            <AccordionContent className="relative bg-background/95 p-6 pt-0 backdrop-blur-sm">
+              <ul className="space-y-4 pt-4">
+                {plumasData.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="rounded-lg border border-border/20 bg-foreground/5 p-4"
+                  >
+                    <h4 className="text-lg font-bold text-primary">{item.name}</h4>
+                    <p className="text-muted-foreground">{item.description}</p>
+                    <p className="mt-1 font-semibold text-foreground">{item.price}</p>
+                  </li>
+                ))}
+              </ul>
+            </AccordionContent>
+          </AccordionItem>
         </Accordion>
       </div>
     </section>
