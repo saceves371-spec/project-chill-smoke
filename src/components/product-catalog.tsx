@@ -59,7 +59,7 @@ export function ProductCatalog() {
                     {brand.hits.map((hit, hitIndex) => (
                       <AccordionItem
                         value={`${brand.name}-${hit.type}`}
-                        key={`hit-${hitIndex}`}
+                        key={`hit-${brandIndex}-${hitIndex}`}
                         className="rounded-lg border border-border/20 bg-foreground/5 data-[state=open]:bg-foreground/10"
                       >
                         <AccordionTrigger className="px-6 py-4 text-base font-medium text-foreground hover:no-underline">
@@ -68,7 +68,7 @@ export function ProductCatalog() {
                         <AccordionContent className="px-6">
                           <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
                             {hit.flavors.map((flavor, flavorIndex) => (
-                              <li key={`flavor-${flavorIndex}`} className="text-muted-foreground">
+                              <li key={`flavor-${brandIndex}-${hitIndex}-${flavorIndex}`} className="text-muted-foreground">
                                 {flavor}
                               </li>
                             ))}
@@ -123,7 +123,7 @@ export function ProductCatalog() {
                       <p className="pb-2 text-sm text-muted-foreground">{item.description}</p>
                       <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
                         {item.brands.map((brand, brandIndex) => (
-                          <li key={`pluma-brand-${brandIndex}`} className="text-muted-foreground">
+                          <li key={`pluma-brand-${itemIndex}-${brandIndex}`} className="text-muted-foreground">
                             {brand}
                           </li>
                         ))}
