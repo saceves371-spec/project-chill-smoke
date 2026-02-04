@@ -87,7 +87,17 @@ export const catalogData: Brand[] = [
     hits: [
       {
         type: '15,000 Hits',
-        flavors: ['Grape ice 🍇❄️ (uva, hielo, fresco)'],
+        flavors: [
+          'Grape ice 🍇❄️ (uva, hielo, fresco)',
+          'BLACKBERRY DRAGONFRUIT ICE 🫐🐉❄️ (mora, pitahaya, hielo, fresco)',
+          'GRAPE BERRIES ICE 🍇🫐❄️ (uva, frutos rojos, hielo, fresco)',
+          'BLUE RAZZ ICE 🫐❄️ (frambuesa azul, hielo, fresco)',
+          'BLUEBERRY DRAGONFRUIT ICE 🫐🐉❄️ (arándano, pitahaya, hielo, fresco)',
+          'MELON ICE 🍈❄️ (melón, hielo, fresco)',
+          'LEMON LIME 🍋🍈 (limón, lima)',
+          'PEACH ICE 🍑❄️ (durazno, hielo, fresco)',
+          'STRAWBERRY CRANBERRY ICE 🍓🍒❄️ (fresa, arándano rojo, hielo, fresco)',
+        ],
       },
     ],
   },
