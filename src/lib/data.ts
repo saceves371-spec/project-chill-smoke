@@ -107,7 +107,14 @@ export const catalogData: Brand[] = [
     hits: [
       {
         type: '12,000 Hits',
-        flavors: ['Strawberry Cherry 🍉🍒 (fresa, cereza)'],
+        flavors: [
+          'Strawberry Cherry 🍉🍒 (fresa, cereza)',
+          'Watermelon mint 🍉🌿 (sandía, menta, fresco)',
+          'Gummy bear 🐻🍬 (gomita, dulce)',
+          'Spearmint 🌿❄️ (menta, fresco)',
+          'Watermelon ice 🍉❄️ (sandía, hielo, fresco)',
+          'Strawberry dragon berry 🍓🐉🫐 (fresa, pitahaya, frutos rojos)',
+        ],
       },
     ],
   },
