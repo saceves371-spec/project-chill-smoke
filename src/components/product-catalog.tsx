@@ -68,6 +68,9 @@ export function ProductCatalog() {
                       </ul>
                     </div>
                   ))}
+                  <p className="mt-4 text-center text-sm font-semibold italic text-muted-foreground">
+                    *SUJETO A DISPONIBILIDAD*
+                  </p>
                 </AccordionContent>
               </AccordionItem>
             );
@@ -112,6 +115,9 @@ export function ProductCatalog() {
                         </ul>
                     </div>
                 ))}
+              <p className="mt-4 text-center text-sm font-semibold italic text-muted-foreground">
+                *SUJETO A DISPONIBILIDAD*
+              </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
