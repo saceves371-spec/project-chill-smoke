@@ -67,8 +67,8 @@ export function ProductCatalog() {
                         </AccordionTrigger>
                         <AccordionContent className="px-6">
                           <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
-                            {hit.flavors.map((flavor) => (
-                              <li key={flavor} className="text-muted-foreground">
+                            {hit.flavors.map((flavor, index) => (
+                              <li key={`${hit.type}-${flavor}-${index}`} className="text-muted-foreground">
                                 {flavor}
                               </li>
                             ))}
@@ -122,8 +122,8 @@ export function ProductCatalog() {
                     <AccordionContent className="px-6">
                       <p className="pb-2 text-sm text-muted-foreground">{item.description}</p>
                       <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
-                        {item.brands.map((brand) => (
-                          <li key={brand} className="text-muted-foreground">
+                        {item.brands.map((brand, index) => (
+                          <li key={`${item.name}-${brand}-${index}`} className="text-muted-foreground">
                             {brand}
                           </li>
                         ))}
