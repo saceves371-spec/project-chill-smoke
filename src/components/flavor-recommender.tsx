@@ -101,10 +101,16 @@ export function FlavorRecommender() {
             </div>
           )}
 
-          {recommendation && (
+          {recommendation && recommendation.recommendations && (
             <div className="border-t border-border p-6">
-              <h3 className="text-xl font-bold text-primary">{recommendation.flavorRecommendation}</h3>
-              <p className="mt-2 text-muted-foreground">{recommendation.reasoning}</p>
+                <div className="space-y-6">
+                    {recommendation.recommendations.map((rec, index) => (
+                        <div key={index}>
+                            <h3 className="text-xl font-bold text-primary">{rec.flavorRecommendation}</h3>
+                            <p className="mt-2 text-muted-foreground">{rec.reasoning}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
           )}
         </Card>

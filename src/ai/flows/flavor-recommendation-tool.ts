@@ -24,7 +24,7 @@ export type FlavorRecommendationInput = z.infer<
   typeof FlavorRecommendationInputSchema
 >;
 
-const FlavorRecommendationOutputSchema = z.object({
+const RecommendationItemSchema = z.object({
   flavorRecommendation: z
     .string()
     .describe('The vape flavor or pen recommended based on user preferences.'),
@@ -33,6 +33,10 @@ const FlavorRecommendationOutputSchema = z.object({
     .describe(
       'The reasoning for recommending the specific product, including why it matches the user preferences.'
     ),
+});
+
+const FlavorRecommendationOutputSchema = z.object({
+    recommendations: z.array(RecommendationItemSchema).max(2).describe('A list of up to two product recommendations.')
 });
 export type FlavorRecommendationOutput = z.infer<
   typeof FlavorRecommendationOutputSchema
@@ -55,7 +59,7 @@ const flavorRecommendationPrompt = ai.definePrompt({
   input: { schema: FlavorRecommendationWithCatalogInputSchema },
   output: { schema: FlavorRecommendationOutputSchema },
   prompt: `You are an expert product recommender for a store called "Chill Smoke".
-Your task is to recommend a single, specific product from the catalogs provided, based on the user's request in Spanish.
+Your task is to recommend one or two of the best products from the catalogs provided, based on the user's request in Spanish.
 
 **User Preferences (in Spanish):**
 "{{{tasteProfile}}}"
@@ -80,15 +84,17 @@ This catalog contains THC pens with different brands for each type.
     *   If the request contains "pluma", you MUST recommend an item ONLY from the "Plumas" catalog.
     *   If the request does NOT contain "pluma", you MUST recommend an item ONLY from the "Vapes Desechables" catalog.
 
-3.  **Find the best match.** Based on the user's description (flavors, feelings, etc.), find the single best matching product in the chosen catalog. For Plumas, you can match based on the description which includes SATIVA, INDICA, or HIBRIDA.
+3.  **Find the best match (or two).** Based on the user's description (flavors, feelings, etc.), find up to two of the best matching products in the chosen catalog. For Plumas, you can match based on the description which includes SATIVA, INDICA, or HIBRIDA.
 
-4.  **Format your response as follows:**
+4.  **Format your response as a list of recommendations.** Each recommendation in the list must contain:
     *   **flavorRecommendation**: State the full product name.
         *   *For Vapes*: State the full flavor name, brand, and hit count. Example: "White peach raspberry 🍑🫐 (GEEK BAR - 25,000 Hits)".
         *   *For Plumas*: State the type and suggest one of the available brands. Example: "Pluma USA, marca MUHAMEDS".
     *   **reasoning**: Explain in Spanish why you chose this product, connecting it to the user's preferences.
 
-**IMPORTANT:** If you cannot find a suitable product in the corresponding catalog, you MUST respond with "No se encontró un producto ideal" for the \`flavorRecommendation\` field, and politely explain why in the \`reasoning\` field in Spanish. For example, if a user asks for a pluma with a specific fruit flavor, you should explain that plumas are categorized by SATIVA/INDICA/HIBRIDA and not by fruit flavors.`,
+**IMPORTANT:**
+*   You can return one or two recommendations.
+*   If you cannot find any suitable products in the correct catalog, you MUST return a single recommendation object in the list where the \`flavorRecommendation\` field is exactly "No se encontró un producto ideal", and the \`reasoning\` field politely explains why in Spanish. For example, if a user asks for a pluma with a specific fruit flavor, you should explain that plumas are categorized by SATIVA/INDICA/HIBRIDA and not by fruit flavors.`,
 });
 
 const flavorRecommendationFlow = ai.defineFlow(
