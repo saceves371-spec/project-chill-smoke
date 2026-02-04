@@ -54,29 +54,18 @@ export function ProductCatalog() {
                   {brand.name}
                 </AccordionTrigger>
                 <AccordionContent className="relative bg-background/95 p-6 pt-0 backdrop-blur-sm">
-                  <h3 className="mb-4 text-xl font-semibold text-primary">Tipos de Hits</h3>
-                  <Accordion type="multiple" className="w-full space-y-2">
-                    {brand.hits.map((hit, hitIndex) => (
-                      <AccordionItem
-                        value={`${brand.name}-${hit.type}`}
-                        key={`hit-${brandIndex}-${hitIndex}`}
-                        className="rounded-lg border border-border/20 bg-foreground/5 data-[state=open]:bg-foreground/10"
-                      >
-                        <AccordionTrigger className="px-6 py-4 text-base font-medium text-foreground hover:no-underline">
-                          {hit.type}
-                        </AccordionTrigger>
-                        <AccordionContent className="px-6">
-                          <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
-                            {hit.flavors.map((flavor, flavorIndex) => (
-                              <li key={`flavor-${brandIndex}-${hitIndex}-${flavorIndex}`} className="text-muted-foreground">
-                                {flavor}
-                              </li>
-                            ))}
-                          </ul>
-                        </AccordionContent>
-                      </AccordionItem>
-                    ))}
-                  </Accordion>
+                  {brand.hits.map((hit, hitIndex) => (
+                    <div key={`hit-${brandIndex}-${hitIndex}`} className="mb-6 last:mb-0">
+                      <h4 className="mb-3 text-lg font-semibold text-primary">{hit.type}</h4>
+                      <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
+                        {hit.flavors.map((flavor, flavorIndex) => (
+                          <li key={`flavor-${brandIndex}-${hitIndex}-${flavorIndex}`} className="text-muted-foreground">
+                            {flavor}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </AccordionContent>
               </AccordionItem>
             );
@@ -108,30 +97,19 @@ export function ProductCatalog() {
               {plumasData.name}
             </AccordionTrigger>
             <AccordionContent className="relative bg-background/95 p-6 pt-0 backdrop-blur-sm">
-              <h3 className="mb-4 text-xl font-semibold text-primary">Tipos de Plumas</h3>
-              <Accordion type="multiple" className="w-full space-y-2">
                 {plumasData.items.map((item, itemIndex) => (
-                  <AccordionItem
-                    value={`pluma-${item.name}`}
-                    key={`pluma-item-${itemIndex}`}
-                    className="rounded-lg border border-border/20 bg-foreground/5 data-[state=open]:bg-foreground/10"
-                  >
-                    <AccordionTrigger className="px-6 py-4 text-base font-medium text-foreground hover:no-underline">
-                      {item.name}
-                    </AccordionTrigger>
-                    <AccordionContent className="px-6">
-                      <p className="pb-2 text-sm text-muted-foreground">{item.description}</p>
-                      <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
-                        {item.brands.map((brand, brandIndex) => (
-                          <li key={`pluma-brand-${itemIndex}-${brandIndex}`} className="text-muted-foreground">
-                            {brand}
-                          </li>
-                        ))}
-                      </ul>
-                    </AccordionContent>
-                  </AccordionItem>
+                    <div key={`pluma-item-${itemIndex}`} className="mb-6 last:mb-0">
+                        <h4 className="mb-2 text-lg font-semibold text-primary">{item.name}</h4>
+                        <p className="pb-2 text-sm text-muted-foreground">{item.description}</p>
+                        <ul className="grid list-disc grid-cols-2 gap-x-8 gap-y-2 py-2 pl-6 md:grid-cols-3">
+                            {item.brands.map((brand, brandIndex) => (
+                            <li key={`pluma-brand-${itemIndex}-${brandIndex}`} className="text-muted-foreground">
+                                {brand}
+                            </li>
+                            ))}
+                        </ul>
+                    </div>
                 ))}
-              </Accordion>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
