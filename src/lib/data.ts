@@ -1,3 +1,4 @@
+
 export type Flavor = string;
 
 export type Hit = {
@@ -58,6 +59,24 @@ export const catalogData: Brand[] = [
           'RASPBERRY jam 🍒 (mermelada de frambuesa)',
           'Cool mint 🌿❄️ (menta, fresco)',
           'White peach raspberry 🍑🫐 (durazno blanco, frambuesa)',
+          'Miami mint 🌴🌿 (menta, miami, fresco)',
+          'Watermelon ice 🍉❄️ (sandía, hielo, fresco)',
+          'Blue raz ice 💠❄️ (frambuesa azul, hielo, fresco)',
+          'Strawberry pop 🍓 (fresa, paleta)',
+          'Strawberry watermelon 🍓🍉 (fresa, sandía)',
+          'Banana taffy 🍌🍬 (plátano, caramelo)',
+          'Sour apple ice 🍏❄️ (manzana verde, agrio, hielo, fresco)',
+          'BlackBerry Blueberry 🍇🔵 (mora, arándano)',
+          'Raspberry peach 🍑🍇 (frambuesa, durazno)',
+          'Sour fuking fab 🍋🍬 (agrio, fabuloso, caramelo)',
+          'Sour straw 🍓⚡ (fresa, agrio)',
+          'Grape slush 🍇❄️ (uva, raspado, fresco)',
+          'Sour mango pineapple 🥭🍍⚡ (mango, piña, agrio)',
+          'Halls 🧊❄️ (menta, eucalipto, fresco)',
+          'Acapulco 🍹🌴 (acapulco, coctel, tropical)',
+          'Peach Perfecto 🍑 (durazno, perfecto)',
+          'Blueberry jam 🍇 (mermelada, arándano)',
+          'Strawberry kiwi 🍓🥝 (fresa, kiwi)',
         ],
       },
     ],
