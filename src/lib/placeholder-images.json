@@ -9,20 +9,20 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1533120613584-936b39678810?w=1080&q=80",
-      "imageHint": "dark green texture"
+      "imageUrl": "https://img.freepik.com/free-photo/view-of-dark-abstract-textured-background_23-2150394336.jpg?w=1080&q=80",
+      "imageHint": "dark texture"
     },
     {
       "id": "geek-brand",
       "description": "Background image for Geek Bar brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1080&q=80",
       "imageHint": "vibrant gradient"
     },
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1627844641508-410692a439e7?w=1080&q=80",
-      "imageHint": "blue smoke"
+      "imageUrl": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1080&q=80",
+      "imageHint": "abstract colorful"
     },
     {
       "id": "iplay-brand",
