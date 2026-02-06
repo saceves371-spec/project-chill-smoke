@@ -3,31 +3,31 @@
     {
       "id": "hero-background",
       "description": "Dark, smoky background for the hero section.",
-      "imageUrl": "https://images.unsplash.com/photo-1542400275-f0f2796b253f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzbW9rZSUyMHRleHR1cmV8ZW58MHx8fHwxNzY5OTE1MDg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1542400275-f0f2796b253f?w=1080&q=80",
       "imageHint": "smoke texture"
     },
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1533120613584-936b39678810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZ3JlZW4lMjB0ZXh0dXJlfGVufDB8fHx8fDE3MjI0NTgyNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1533120613584-936b39678810?w=1080&q=80",
       "imageHint": "dark green texture"
     },
     {
       "id": "geek-brand",
       "description": "Background image for Geek Bar brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx2aWJyYW50JTIwY29sb3JmdWwlMjBncmFkaWVudCUyMGJgY2tncm91bmR8ZW58MHx8fHwxNzcxNDc4NTgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1614850523296-d8c1af93d400?w=1080&q=80",
       "imageHint": "vibrant gradient"
     },
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1552501097-90c239454e93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNXx8YWJzdHJhY3QlMjBibHVlJTIwc21va2V8ZW58MHx8fHwxNzcyMjIyNzMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=1080&q=80",
       "imageHint": "abstract smoke"
     },
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1620121692029-d088224ddc74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGRhcmslMjBncmFkaWVudHxlbnwwfHx8fDE3NzE5MTEzMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1080&q=80",
       "imageHint": "dark gradient"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://images.unsplash.com/photo-1615937657572-1326c5954202?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW5uYWJpcyUyMGxlYWYlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzE0NzYwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1608905898083-05539735492a?w=1080&q=80",
       "imageHint": "cannabis dark"
     },
     {
