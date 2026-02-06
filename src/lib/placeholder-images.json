@@ -47,6 +47,12 @@
       "description": "Background image for the Plumas category.",
       "imageUrl": "https://img.freepik.com/vector-gratis/fondo-hoja-cannabis-realista_23-2148785600.jpg",
       "imageHint": "cannabis leaf"
+    },
+    {
+      "id": "decorative-smoke",
+      "description": "Decorative smoke effect for product cards",
+      "imageUrl": "https://storage.googleapis.com/studioprod-51a89.appspot.com/a97f7091-64e0-498c-a1d2-1c6d86058d83.png",
+      "imageHint": "white smoke"
     }
   ]
 }
