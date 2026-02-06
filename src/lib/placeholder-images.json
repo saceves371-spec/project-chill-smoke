@@ -21,13 +21,13 @@
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1574169208507-84376144848b?w=1080&q=80",
-      "imageHint": "abstract smoke"
+      "imageUrl": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=1080&q=80",
+      "imageHint": "blue smoke"
     },
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1080&q=80",
       "imageHint": "dark gradient"
     },
     {
