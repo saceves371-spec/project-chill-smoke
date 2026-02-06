@@ -21,9 +21,9 @@ export function Hero() {
           />
         )}
 
-        <p className="mt-[-4rem] text-2xl text-muted-foreground opacity-80">
+        <h1 className="mt-[-4rem] text-2xl font-normal text-muted-foreground opacity-80">
           Sabor que pega distinto
-        </p>
+        </h1>
 
         <Button
           asChild
