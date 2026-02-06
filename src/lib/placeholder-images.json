@@ -21,14 +21,14 @@
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1569108428769-7c9331808620?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpY2UlMjBibHVlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzcxNDc4NjYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ice blue"
+      "imageUrl": "https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGJsdWUlMjBwaW5rfGVufDB8fHx8MTc3MTcyODk1Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract blue pink"
     },
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1505492434382-f3c3d7f95a56?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxkYXJrJTIwYmx1ZSUyMHdhdGVyJTIwdGV4dHVyZXxlbnwwfHx8fDE3NzE0Nzg2MDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dark blue water"
+      "imageUrl": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXJrJTIwdGV4dHVyZXxlbnwwfHx8fDE3NzE3Mjg4ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark texture"
     },
     {
       "id": "hero-logo",
@@ -39,8 +39,8 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://images.unsplash.com/photo-1609355460591-314841e21d51?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYW5uYWJpcyUyMGxlYWYlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzE0NzYwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cannabis leaf"
+      "imageUrl": "https://images.unsplash.com/photo-1615937657572-1326c5954202?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjYW5uYWJpcyUyMGxlYWYlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzE0NzYwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cannabis dark"
     },
     {
       "id": "decorative-smoke",
