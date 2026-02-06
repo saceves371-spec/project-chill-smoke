@@ -20,7 +20,7 @@ export default function RootLayout({
 
   return (
     <html
-      lang="en"
+      lang="es"
       className={cn('dark', inter.variable, anton.variable)}
       suppressHydrationWarning
     >
