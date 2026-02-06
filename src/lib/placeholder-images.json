@@ -21,14 +21,14 @@
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1627844641508-410692a439e7?w=1080&q=80",
       "imageHint": "blue smoke"
     },
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?w=1080&q=80",
-      "imageHint": "dark gradient"
+      "imageUrl": "https://wallpapers.com/images/hd/youtube-thumbnail-blue-to-red-gradient-bdtad10gq914zeou.jpg",
+      "imageHint": "blue red gradient"
     },
     {
       "id": "hero-logo",
@@ -39,7 +39,7 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://images.unsplash.com/photo-1608905898083-05539735492a?w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1628504818615-18451b52f1b7?w=1080&q=80",
       "imageHint": "cannabis dark"
     },
     {
