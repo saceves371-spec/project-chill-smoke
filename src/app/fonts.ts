@@ -1,4 +1,4 @@
-import { Anton, Inter, Permanent_Marker } from 'next/font/google';
+import { Anton, Inter } from 'next/font/google';
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -11,11 +11,4 @@ export const anton = Anton({
   weight: '400',
   display: 'swap',
   variable: '--font-anton',
-});
-
-export const permanentMarker = Permanent_Marker({
-  subsets: ['latin'],
-  weight: '400',
-  display: 'swap',
-  variable: '--font-permanent-marker',
 });

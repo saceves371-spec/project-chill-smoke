@@ -3,7 +3,7 @@ import Image from 'next/image';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { anton, inter, permanentMarker } from '@/app/fonts';
+import { anton, inter } from '@/app/fonts';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn('dark', inter.variable, anton.variable, permanentMarker.variable)}
+      className={cn('dark', inter.variable, anton.variable)}
       suppressHydrationWarning
     >
       <head />
