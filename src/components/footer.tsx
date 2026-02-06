@@ -35,7 +35,7 @@ export function Footer() {
                         ¡Vendemos al Mayoreo!
                     </h4>
                     <p className="max-w-xl text-lg text-muted-foreground">
-                        ¿Interesado en distribuir? Contáctanos por Instagram para conocer nuestros precios especiales.
+                        ¿Interesado en distribuir? A partir de 10 piezas, contáctanos por Instagram para conocer nuestros precios especiales.
                     </p>
                 </div>
 
