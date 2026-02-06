@@ -9,7 +9,7 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://i.pinimg.com/736x/dd/42/18/dd42181569331a2b04c9133f2c5f89da.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1589995276686-88390c9b015e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwaW5rJTIwbGF2YSUyMGFic3RyYWN0fGVufDB8fHx8MTc3MTQ3NjE5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "pink lava"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://wallpapers.com/images/hd/youtube-thumbnail-blue-to-red-gradient-bdtad10gq914zeou.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1557683316-9ca41a1b4c3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibHVlJTIwcmVkJTIwZ3JhZGllbnQlMjBhYnN0cmFjdHxlbnwwfHx8fDE3NzE0NzU5ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "blue red gradient"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://img.freepik.com/vector-gratis/fondo-hoja-cannabis-realista_23-2148785600.jpg",
+      "imageUrl": "https://images.unsplash.com/photo-1620536398579-53b3a7a9f7d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjYW5uYWJpcyUyMGxlYWYlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzE0NzYwNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "cannabis leaf"
     },
     {
