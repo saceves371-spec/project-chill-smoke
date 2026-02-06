@@ -9,7 +9,7 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1533167519485-788756534578?w=1080&q=80",
+      "imageUrl": "https://i.pinimg.com/736x/dd/42/18/dd42181569331a2b04c9133f2c5f89da.jpg",
       "imageHint": "dark texture"
     },
     {
@@ -27,7 +27,7 @@
     {
       "id": "iplay-brand",
       "description": "Background image for IPLAY BOX brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1557683316-9ca41a2b5384?w=1080&q=80",
+      "imageUrl": "https://wallpapers.com/images/hd/youtube-thumbnail-blue-to-red-gradient-bdtad10gq914zeou.jpg",
       "imageHint": "blue red gradient"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://images.unsplash.com/photo-1613504440316-36a5d4a4a5b1?w=1080&q=80",
+      "imageUrl": "https://img.freepik.com/vector-gratis/fondo-hoja-cannabis-realista_23-2148785600.jpg",
       "imageHint": "cannabis leaf"
     }
   ]
