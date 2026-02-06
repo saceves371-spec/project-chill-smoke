@@ -9,7 +9,7 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://img.freepik.com/free-photo/view-of-dark-abstract-textured-background_23-2150394336.jpg?w=1080&q=80",
+      "imageUrl": "https://i.pinimg.com/736x/dd/42/18/dd42181569331a2b04c9133f2c5f89da.jpg",
       "imageHint": "dark texture"
     },
     {
@@ -21,7 +21,7 @@
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1080&q=80",
+      "imageUrl": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGNvbG9yZnVsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzAyNjE0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract colorful"
     },
     {
