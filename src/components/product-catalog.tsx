@@ -12,7 +12,6 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProductCatalog() {
   const plumasImage = PlaceHolderImages.find((p) => p.id === plumasData.imageId);
-  const decorativeSmokeImage = PlaceHolderImages.find((p) => p.id === 'decorative-smoke');
 
   return (
     <section id="catalog" className="w-full py-12 md:py-20">
@@ -45,16 +44,6 @@ export function ProductCatalog() {
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
-                {decorativeSmokeImage && (
-                  <Image
-                    src={decorativeSmokeImage.imageUrl}
-                    alt={decorativeSmokeImage.description}
-                    width={200}
-                    height={200}
-                    data-ai-hint={decorativeSmokeImage.imageHint}
-                    className="absolute -bottom-10 -right-10 z-0 w-32 opacity-20 transition-transform duration-500 group-hover:scale-125 group-hover:opacity-30 md:w-48"
-                  />
-                )}
                 <AccordionTrigger className="relative p-6 text-4xl font-bold uppercase text-white hover:no-underline md:p-8 md:text-5xl [&>svg]:h-8 [&>svg]:w-8 [&>svg]:text-accent">
                   {brand.name}
                 </AccordionTrigger>
@@ -95,16 +84,6 @@ export function ProductCatalog() {
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
-            {decorativeSmokeImage && (
-              <Image
-                src={decorativeSmokeImage.imageUrl}
-                alt={decorativeSmokeImage.description}
-                width={200}
-                height={200}
-                data-ai-hint={decorativeSmokeImage.imageHint}
-                className="absolute -bottom-10 -right-10 z-0 w-32 opacity-20 transition-transform duration-500 group-hover:scale-125 group-hover:opacity-30 md:w-48"
-              />
-            )}
             <AccordionTrigger className="relative p-6 text-4xl font-bold uppercase text-white hover:no-underline md:p-8 md:text-5xl [&>svg]:h-8 [&>svg]:w-8 [&>svg]:text-accent">
               {plumasData.name}
             </AccordionTrigger>
