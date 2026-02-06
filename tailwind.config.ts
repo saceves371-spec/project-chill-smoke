@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Anton', 'sans-serif'],
-        logo: ['"Permanent Marker"', 'cursive'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-anton)', 'sans-serif'],
+        logo: ['var(--font-permanent-marker)', 'cursive'],
         code: ['monospace'],
       },
       colors: {

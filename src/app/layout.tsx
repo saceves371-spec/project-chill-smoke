@@ -3,6 +3,8 @@ import Image from 'next/image';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { anton, inter, permanentMarker } from '@/app/fonts';
+import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Chill Smoke Catalog',
@@ -17,15 +19,12 @@ export default function RootLayout({
   const bgImage = PlaceHolderImages.find((p) => p.id === 'hero-background');
 
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Permanent+Marker&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      className={cn('dark', inter.variable, anton.variable, permanentMarker.variable)}
+      suppressHydrationWarning
+    >
+      <head />
       <body className="font-body antialiased relative">
         {bgImage && (
           <Image
