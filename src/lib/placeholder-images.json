@@ -41,6 +41,12 @@
       "description": "Background image for the Plumas category.",
       "imageUrl": "https://img.freepik.com/vector-gratis/fondo-hoja-cannabis-realista_23-2148785600.jpg",
       "imageHint": "cannabis leaf"
+    },
+    {
+      "id": "smoke-overlay",
+      "description": "A transparent smoke overlay effect.",
+      "imageUrl": "https://res.cloudinary.com/dogre008n/image/upload/v1770550888/smoke-overlay_j9zslf.png",
+      "imageHint": "smoke overlay"
     }
   ]
 }
