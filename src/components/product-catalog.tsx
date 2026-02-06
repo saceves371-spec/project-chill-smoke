@@ -12,6 +12,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function ProductCatalog() {
   const plumasImage = PlaceHolderImages.find((p) => p.id === plumasData.imageId);
+  const smokeOverlayImage = PlaceHolderImages.find((p) => p.id === 'smoke-overlay');
 
   return (
     <section id="catalog" className="w-full py-12 md:py-20">
@@ -41,6 +42,15 @@ export function ProductCatalog() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                     data-ai-hint={brandImage.imageHint}
+                  />
+                )}
+                {smokeOverlayImage && (
+                  <Image
+                    src={smokeOverlayImage.imageUrl}
+                    alt={smokeOverlayImage.description}
+                    fill
+                    className="pointer-events-none object-cover mix-blend-screen opacity-40 transition-opacity duration-500 group-hover:opacity-60"
+                    data-ai-hint={smokeOverlayImage.imageHint}
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
@@ -81,6 +91,15 @@ export function ProductCatalog() {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 data-ai-hint={plumasImage.imageHint}
+              />
+            )}
+            {smokeOverlayImage && (
+              <Image
+                src={smokeOverlayImage.imageUrl}
+                alt={smokeOverlayImage.description}
+                fill
+                className="pointer-events-none object-cover mix-blend-screen opacity-40 transition-opacity duration-500 group-hover:opacity-60"
+                data-ai-hint={smokeOverlayImage.imageHint}
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent transition-all duration-300" />
