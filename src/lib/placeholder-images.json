@@ -9,8 +9,8 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1574169208507-84376144848b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwYmFja2dyb3VuZCUyMHJpbmclMjBsaWdodHxlbnwwfHx8fDE3NzE0Nzg4MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dark light ring"
+      "imageUrl": "https://images.unsplash.com/photo-1533120613584-936b39678810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYXJrJTIwZ3JlZW4lMjB0ZXh0dXJlfGVufDB8fHx8fDE3MjI0NTgyNTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark green texture"
     },
     {
       "id": "geek-brand",
