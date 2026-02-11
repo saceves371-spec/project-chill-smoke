@@ -3,8 +3,8 @@
     {
       "id": "hero-background",
       "description": "Dark, smoky background for the hero section.",
-      "imageUrl": "https://images.unsplash.com/photo-1627499949691-154d1fc004c2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzbW9rZSUyMHRleHR1cmV8ZW58MHx8fHwxNzcwODMyNDYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "smoke texture"
+      "imageUrl": "https://images.unsplash.com/photo-1533122250115-613288489144?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXJrJTIwYWJzdHJhY3QlMjBzbW9rZXxlbnwwfHx8fDE3MTg3NTIxMDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dark abstract smoke"
     },
     {
       "id": "core-brand",
