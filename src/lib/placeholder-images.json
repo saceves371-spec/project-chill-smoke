@@ -9,19 +9,19 @@
     {
       "id": "core-brand",
       "description": "Background image for CORE brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1507646227500-4d389b0012be?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZ3JlZW4lMjB0ZXh0dXJlfGVufDB8fHx8fDE3MTg3NTI2NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1629197520635-16570fbd0bb3?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "dark green texture"
     },
     {
       "id": "geek-brand",
       "description": "Background image for Geek Bar brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1614850523011-8f49ffc73908?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjb2xvciUyMGdyYWRpZW50fGVufDB8fHx8fDE3MTg3NTI0MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=1080&q=80",
       "imageHint": "vibrant gradient"
     },
     {
       "id": "humo-azul-brand",
       "description": "Background image for Humo Azul brand.",
-      "imageUrl": "https://images.unsplash.com/photo-1545263697-e2c7c5a38f6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWdodCUyMGJsdWUlMjBwYWludCUyMHRleHR1cmV8ZW58MHx8fHwxNzE4NzUyNjAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGNvbG9yZnVsJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzAyNjE0MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "light blue paint"
     },
     {
@@ -39,7 +39,7 @@
     {
       "id": "plumas-brand",
       "description": "Background image for the Plumas category.",
-      "imageUrl": "https://images.unsplash.com/photo-1625249011101-fd3947e09343?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYW5uYWJpcyUyMGxlYWZ8ZW58MHx8fHwxNzcwODMyNDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1711705887174-044f0e8edf94?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "cannabis leaf"
     },
     {
