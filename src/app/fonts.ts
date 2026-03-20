@@ -1,4 +1,4 @@
-import { Anton, Inter } from 'next/font/google';
+import { Space_Grotesk, Inter } from 'next/font/google';
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -6,9 +6,9 @@ export const inter = Inter({
   variable: '--font-inter',
 });
 
-export const anton = Anton({
+export const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '700'],
   display: 'swap',
-  variable: '--font-anton',
+  variable: '--font-space-grotesk',
 });
